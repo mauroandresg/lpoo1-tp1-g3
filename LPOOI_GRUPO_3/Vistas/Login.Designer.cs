@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.PicLogo = new System.Windows.Forms.PictureBox();
@@ -35,11 +36,13 @@
             this.LblSubtitulo = new System.Windows.Forms.Label();
             this.LblUsuario = new System.Windows.Forms.Label();
             this.BtnIngresar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.LblContra = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtContra = new System.Windows.Forms.TextBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.PnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -103,13 +106,15 @@
             this.BtnIngresar.TabIndex = 5;
             this.BtnIngresar.Text = "Ingresar";
             this.BtnIngresar.UseVisualStyleBackColor = true;
+            this.BtnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
             // 
-            // textBox1
+            // TxtUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(19, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 20);
-            this.textBox1.TabIndex = 6;
+            this.TxtUsuario.Location = new System.Drawing.Point(19, 110);
+            this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.Size = new System.Drawing.Size(140, 20);
+            this.TxtUsuario.TabIndex = 6;
+            this.TxtUsuario.Validated += new System.EventHandler(this.TxtUsuario_Validated);
             // 
             // LblContra
             // 
@@ -120,12 +125,20 @@
             this.LblContra.TabIndex = 7;
             this.LblContra.Text = "Contraseña";
             // 
-            // textBox2
+            // TxtContra
             // 
-            this.textBox2.Location = new System.Drawing.Point(19, 153);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 20);
-            this.textBox2.TabIndex = 8;
+            this.TxtContra.Location = new System.Drawing.Point(19, 153);
+            this.TxtContra.Name = "TxtContra";
+            this.TxtContra.Size = new System.Drawing.Size(140, 20);
+            this.TxtContra.TabIndex = 8;
+            this.TxtContra.UseSystemPasswordChar = true;
+            this.TxtContra.Validated += new System.EventHandler(this.TxtContra_Validated);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
             // 
             // Login
             // 
@@ -133,9 +146,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 261);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtContra);
             this.Controls.Add(this.LblContra);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtUsuario);
             this.Controls.Add(this.BtnIngresar);
             this.Controls.Add(this.LblUsuario);
             this.Controls.Add(this.LblSubtitulo);
@@ -148,6 +161,7 @@
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.PnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,8 +175,9 @@
         private System.Windows.Forms.Label LblSubtitulo;
         private System.Windows.Forms.Label LblUsuario;
         private System.Windows.Forms.Button BtnIngresar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.Label LblContra;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtContra;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
