@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="Atleta.cs" />
     <Compile Include="Categoria.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Competencia.cs" />
     <Compile Include="Disciplina.cs" />
     <Compile Include="Evento.cs" />
