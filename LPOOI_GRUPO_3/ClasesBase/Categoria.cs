@@ -7,5 +7,9 @@ namespace ClasesBase
 {
     class Categoria
     {
+        public string Cat_ID { get; set; }
+        public string Cat_Nombre { get; set; }
+        public string Cat_Descripcion { get; set; }
+
     }
 }

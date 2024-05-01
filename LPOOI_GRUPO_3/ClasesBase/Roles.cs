@@ -7,5 +7,7 @@ namespace ClasesBase
 {
     class Roles
     {
+        public int Rol_Codigo { get; set; }
+        public string Rol_Descripcion { get; set; }
     }
 }
