@@ -5,9 +5,18 @@ using System.Text;
 
 namespace ClasesBase
 {
-    class Roles
+    public class Roles
     {
         public int Rol_Codigo { get; set; }
         public string Rol_Descripcion { get; set; }
+
+        public Roles()
+        { }
+
+        public Roles(int rol_Codigo, string rol_Descripcion)
+        {
+            Rol_Codigo = rol_Codigo;
+            Rol_Descripcion = rol_Descripcion;
+        }
     }
 }
