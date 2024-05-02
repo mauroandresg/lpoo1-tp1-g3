@@ -58,7 +58,7 @@
             // 
             // PicLogo
             // 
-            this.PicLogo.Image = ((System.Drawing.Image)(resources.GetObject("PicLogo.Image")));
+            this.PicLogo.Image = global::Vistas.Properties.Resources.sport_flow_logo;
             this.PicLogo.InitialImage = null;
             this.PicLogo.Location = new System.Drawing.Point(8, 73);
             this.PicLogo.Margin = new System.Windows.Forms.Padding(0);
@@ -155,6 +155,7 @@
             this.Controls.Add(this.PnlLogo);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login";
             this.Padding = new System.Windows.Forms.Padding(16);
