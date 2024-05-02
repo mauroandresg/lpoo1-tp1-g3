@@ -12,11 +12,15 @@ namespace Vistas
 {
     public partial class Login : Form
     {
+        public bool AutenticacionCorrecta { get; private set; } // Propiedad: resultado de autenticación
+
         bool usr_valido = false;
         bool contra_valido = false;
+
         public Login()
         {
             InitializeComponent();
+            this.AutenticacionCorrecta = false; // Se obliga a realizar la autenticacion al iniciar el form
         }
 
         private void BtnIngresar_Click(object sender, EventArgs e)
@@ -53,10 +57,8 @@ namespace Vistas
                     DialogResult result = MessageBox.Show(msg, "Credenciales Aceptadas", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        //this.Hide();
-                        //Inicio formInicio = new Inicio();
-                        //formInicio.Show();
-                        MessageBox.Show("Ingresando");
+                        this.AutenticacionCorrecta = true; // Se guarda el resultado de la autenticacion
+                        this.Close();
                     }
                 } else
                 {
