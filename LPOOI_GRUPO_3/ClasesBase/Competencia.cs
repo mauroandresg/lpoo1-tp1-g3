@@ -16,6 +16,7 @@ namespace ClasesBase
         private string com_organizador;
         private string com_ubicacion;
         private string com_sponsor;
+        private Categoria cat_id;
 
         public string Com_sponsor
         {
