@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClasesBase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,8 +23,45 @@ namespace Vistas
         {
             if (usr_valido && contra_valido)
             {
+                // Precarga de roles
+                Roles r1 = new Roles(1, "Vendedor");
+                Roles r2 = new Roles(2, "Operador");
+                Roles r3 = new Roles(3, "Administrador");
+
+                // Precarga de usuarios
+                Usuario u1 = new Usuario("cami_tor", "contra1234", "Torres Camila", 1);
+                Usuario u2 = new Usuario("ariel_op", "contraSegura", "Amparo Ariel", 2);
+                Usuario u3 = new Usuario("indi_xd", "admin", "Benson Indigo", 3);
+
+                Usuario[] usuarios = { u1, u2, u3 };
+
                 // Autenticación de credenciales
-                MessageBox.Show("Ingresando");
+                bool autorizado = false;
+                int index = -1;
+                for (int i = 0; i < usuarios.Length; i++)
+                {
+                    if (string.Equals(usuarios[i].Usu_NombreUsuario, TxtUsuario.Text)
+                        && string.Equals(usuarios[i].Usu_Contrasenia, TxtContra.Text))
+                    {
+                        autorizado = true;
+                        index = i;
+                    }
+                }
+                if (autorizado)
+                {
+                    string msg = "Ingresando como " + usuarios[index].Usu_ApellidoNombre + "...\n" + "Desea continuar?";
+                    DialogResult result = MessageBox.Show(msg, "Credenciales Aceptadas", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        //this.Hide();
+                        //Inicio formInicio = new Inicio();
+                        //formInicio.Show();
+                        MessageBox.Show("Ingresando");
+                    }
+                } else
+                {
+                    MessageBox.Show("Usuario o contraseña invalidos...", "Credenciales Denegadas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             } else
             {
                 MessageBox.Show("Ingrese sus crendenciales", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Error);

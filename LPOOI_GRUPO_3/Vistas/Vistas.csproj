@@ -78,7 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClasesBase\ClasesBase.csproj">
-      <Project>{7BE24AB2-DC1E-4893-820A-44EADCE479CD}</Project>
+      <Project>{7be24ab2-dc1e-4893-820a-44eadce479cd}</Project>
       <Name>ClasesBase</Name>
     </ProjectReference>
   </ItemGroup>
