@@ -17,13 +17,13 @@ namespace ClasesBase
         private string com_ubicacion;
         private string com_sponsor;
         private int cat_id;
-        private int dis_id;
 
-        public Categoria Cat_id
+        public int Cat_id
         {
             get { return cat_id; }
             set { cat_id = value; }
         }
+        private int dis_id;
 
         public string Com_sponsor
         {
