@@ -99,6 +99,7 @@
     <None Include="Resources\sport_flow_logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\information.png" />
     <Content Include="sport_flow_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

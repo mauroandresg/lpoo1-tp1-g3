@@ -15,5 +15,10 @@ namespace Vistas
         {
             InitializeComponent();
         }
+
+        private void aboutSportFlowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sport Flow - version 0.1 \nDesarrollado por grupo LPOO1-G3");
+        }
     }
 }
