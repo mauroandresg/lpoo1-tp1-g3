@@ -43,9 +43,10 @@ namespace ClasesBase
             set { usu_id = value; }
         }
 
-        public Usuario(string username, string password) {
+        public Usuario(string username, string password, int rol) {
             usu_NombreUsuario = username;
             usu_contraseña = password;
+            rol_codigo = rol;
         }
     }
 }

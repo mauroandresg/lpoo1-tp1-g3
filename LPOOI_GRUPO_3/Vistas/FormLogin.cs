@@ -21,8 +21,17 @@ namespace Vistas
         {
             Boolean bUserFound = false;
 
-            Usuario user1 = new Usuario("juan","123");
-            Usuario user2 = new Usuario("maria", "456");
+            Usuario user1 = new Usuario("juan","123",1);
+            Usuario user2 = new Usuario("maria", "456",2);
+            Usuario user3 = new Usuario("carlos", "789",3);
+
+            Roles rol1 = new Roles(1, "Administrador");
+            Roles rol2 = new Roles(2, "Vendedor");
+            Roles rol3 = new Roles(3, "Operador");
+
+
+
+            FormBienvenida oFormMain = new FormBienvenida();
 
             if(user1.Usu_NombreUsuario == textName.Text && user1.Usu_contraseña == textPassword.Text){
                 bUserFound = true;
@@ -33,7 +42,8 @@ namespace Vistas
             }
             if (bUserFound)
             {
-                MessageBox.Show("Bienvenido" + textName.Text);
+                MessageBox.Show("Bienvenido " + textName.Text);
+                oFormMain.Show();
             }
             else
             {
