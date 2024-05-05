@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using ClasesBase;
 
 namespace Vistas
 {
@@ -18,7 +19,26 @@ namespace Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Boolean bUserFound = false;
 
+            Usuario user1 = new Usuario("juan","123");
+            Usuario user2 = new Usuario("maria", "456");
+
+            if(user1.Usu_NombreUsuario == textName.Text && user1.Usu_contraseña == textPassword.Text){
+                bUserFound = true;
+            }
+            else if(user2.Usu_NombreUsuario == textName.Text && user2.Usu_contraseña == textPassword.Text)
+            {
+                bUserFound = true; 
+            }
+            if (bUserFound)
+            {
+                MessageBox.Show("Bienvenido" + textName.Text);
+            }
+            else
+            {
+                MessageBox.Show("Datos incorrectos");
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
