@@ -33,7 +33,7 @@
             this.PanelAtleta = new System.Windows.Forms.Panel();
             this.NumAtlPeso = new System.Windows.Forms.NumericUpDown();
             this.NumAtlAltura = new System.Windows.Forms.NumericUpDown();
-            this.BtnAtlGuardar = new System.Windows.Forms.Button();
+            this.BtnGuardar = new System.Windows.Forms.Button();
             this.DateAtlFechaNac = new System.Windows.Forms.DateTimePicker();
             this.TxtAtlGenero = new System.Windows.Forms.ComboBox();
             this.TxtAtlEmail = new System.Windows.Forms.TextBox();
@@ -55,13 +55,11 @@
             this.TxtAtlDNI = new System.Windows.Forms.TextBox();
             this.LblAtl1 = new System.Windows.Forms.Label();
             this.PanelDisciplina = new System.Windows.Forms.Panel();
-            this.BtnDisGuardar = new System.Windows.Forms.Button();
             this.TxtDisDescripcion = new System.Windows.Forms.TextBox();
             this.LblDis2 = new System.Windows.Forms.Label();
             this.TxtDisNombre = new System.Windows.Forms.TextBox();
             this.LblDis1 = new System.Windows.Forms.Label();
             this.PanelCategoria = new System.Windows.Forms.Panel();
-            this.BtnCatGuardar = new System.Windows.Forms.Button();
             this.TxtCatDescripcion = new System.Windows.Forms.TextBox();
             this.LblCat2 = new System.Windows.Forms.Label();
             this.TxtCatNombre = new System.Windows.Forms.TextBox();
@@ -88,7 +86,6 @@
             // 
             this.PanelAtleta.Controls.Add(this.NumAtlPeso);
             this.PanelAtleta.Controls.Add(this.NumAtlAltura);
-            this.PanelAtleta.Controls.Add(this.BtnAtlGuardar);
             this.PanelAtleta.Controls.Add(this.DateAtlFechaNac);
             this.PanelAtleta.Controls.Add(this.TxtAtlGenero);
             this.PanelAtleta.Controls.Add(this.TxtAtlEmail);
@@ -111,7 +108,7 @@
             this.PanelAtleta.Controls.Add(this.LblAtl1);
             this.PanelAtleta.Location = new System.Drawing.Point(16, 45);
             this.PanelAtleta.Name = "PanelAtleta";
-            this.PanelAtleta.Size = new System.Drawing.Size(222, 313);
+            this.PanelAtleta.Size = new System.Drawing.Size(222, 288);
             this.PanelAtleta.TabIndex = 1;
             this.PanelAtleta.Visible = false;
             // 
@@ -141,15 +138,16 @@
             this.NumAtlAltura.Size = new System.Drawing.Size(100, 20);
             this.NumAtlAltura.TabIndex = 29;
             // 
-            // BtnAtlGuardar
+            // BtnGuardar
             // 
-            this.BtnAtlGuardar.Location = new System.Drawing.Point(3, 287);
-            this.BtnAtlGuardar.Margin = new System.Windows.Forms.Padding(3, 24, 3, 3);
-            this.BtnAtlGuardar.Name = "BtnAtlGuardar";
-            this.BtnAtlGuardar.Size = new System.Drawing.Size(75, 23);
-            this.BtnAtlGuardar.TabIndex = 28;
-            this.BtnAtlGuardar.Text = "Guardar";
-            this.BtnAtlGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Location = new System.Drawing.Point(16, 334);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(3, 24, 3, 3);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.BtnGuardar.TabIndex = 28;
+            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // DateAtlFechaNac
             // 
@@ -322,26 +320,15 @@
             // 
             // PanelDisciplina
             // 
-            this.PanelDisciplina.Controls.Add(this.BtnDisGuardar);
             this.PanelDisciplina.Controls.Add(this.TxtDisDescripcion);
             this.PanelDisciplina.Controls.Add(this.LblDis2);
             this.PanelDisciplina.Controls.Add(this.TxtDisNombre);
             this.PanelDisciplina.Controls.Add(this.LblDis1);
             this.PanelDisciplina.Location = new System.Drawing.Point(16, 45);
             this.PanelDisciplina.Name = "PanelDisciplina";
-            this.PanelDisciplina.Size = new System.Drawing.Size(222, 313);
+            this.PanelDisciplina.Size = new System.Drawing.Size(222, 288);
             this.PanelDisciplina.TabIndex = 2;
             this.PanelDisciplina.Visible = false;
-            // 
-            // BtnDisGuardar
-            // 
-            this.BtnDisGuardar.Location = new System.Drawing.Point(3, 193);
-            this.BtnDisGuardar.Margin = new System.Windows.Forms.Padding(3, 24, 3, 3);
-            this.BtnDisGuardar.Name = "BtnDisGuardar";
-            this.BtnDisGuardar.Size = new System.Drawing.Size(75, 23);
-            this.BtnDisGuardar.TabIndex = 28;
-            this.BtnDisGuardar.Text = "Guardar";
-            this.BtnDisGuardar.UseVisualStyleBackColor = true;
             // 
             // TxtDisDescripcion
             // 
@@ -377,26 +364,15 @@
             // 
             // PanelCategoria
             // 
-            this.PanelCategoria.Controls.Add(this.BtnCatGuardar);
             this.PanelCategoria.Controls.Add(this.TxtCatDescripcion);
             this.PanelCategoria.Controls.Add(this.LblCat2);
             this.PanelCategoria.Controls.Add(this.TxtCatNombre);
             this.PanelCategoria.Controls.Add(this.LblCat1);
             this.PanelCategoria.Location = new System.Drawing.Point(16, 45);
             this.PanelCategoria.Name = "PanelCategoria";
-            this.PanelCategoria.Size = new System.Drawing.Size(222, 313);
+            this.PanelCategoria.Size = new System.Drawing.Size(222, 288);
             this.PanelCategoria.TabIndex = 3;
             this.PanelCategoria.Visible = false;
-            // 
-            // BtnCatGuardar
-            // 
-            this.BtnCatGuardar.Location = new System.Drawing.Point(3, 193);
-            this.BtnCatGuardar.Margin = new System.Windows.Forms.Padding(3, 24, 3, 3);
-            this.BtnCatGuardar.Name = "BtnCatGuardar";
-            this.BtnCatGuardar.Size = new System.Drawing.Size(75, 23);
-            this.BtnCatGuardar.TabIndex = 28;
-            this.BtnCatGuardar.Text = "Guardar";
-            this.BtnCatGuardar.UseVisualStyleBackColor = true;
             // 
             // TxtCatDescripcion
             // 
@@ -439,8 +415,10 @@
             this.Controls.Add(this.PanelCategoria);
             this.Controls.Add(this.PanelAtleta);
             this.Controls.Add(this.LblTituloFormulario);
+            this.Controls.Add(this.BtnGuardar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Formulario";
             this.Text = "Formulario";
             this.Load += new System.EventHandler(this.Formulario_Load);
@@ -481,17 +459,15 @@
         private System.Windows.Forms.TextBox TxtAtlNombre;
         private System.Windows.Forms.Label LblAtl3;
         private System.Windows.Forms.DateTimePicker DateAtlFechaNac;
-        private System.Windows.Forms.Button BtnAtlGuardar;
+        private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.NumericUpDown NumAtlAltura;
         private System.Windows.Forms.NumericUpDown NumAtlPeso;
         private System.Windows.Forms.Panel PanelDisciplina;
-        private System.Windows.Forms.Button BtnDisGuardar;
         private System.Windows.Forms.TextBox TxtDisDescripcion;
         private System.Windows.Forms.Label LblDis2;
         private System.Windows.Forms.TextBox TxtDisNombre;
         private System.Windows.Forms.Label LblDis1;
         private System.Windows.Forms.Panel PanelCategoria;
-        private System.Windows.Forms.Button BtnCatGuardar;
         private System.Windows.Forms.TextBox TxtCatDescripcion;
         private System.Windows.Forms.Label LblCat2;
         private System.Windows.Forms.TextBox TxtCatNombre;

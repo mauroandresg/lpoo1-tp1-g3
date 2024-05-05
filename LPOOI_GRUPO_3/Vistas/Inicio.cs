@@ -36,7 +36,7 @@ namespace Vistas
             Formulario frmFormulario = new Formulario();
             frmFormulario.TituloTxt = "Nueva Categoria";
             frmFormulario.TipoFormulario = TipoForm.CATEGORIA;
-            frmFormulario.Show();
+            frmFormulario.ShowDialog();
 
             if (frmFormulario.NuevaEntidadCreada == true)
             {
@@ -49,7 +49,7 @@ namespace Vistas
             Formulario frmFormulario = new Formulario();
             frmFormulario.TituloTxt = "Nueva Disciplina";
             frmFormulario.TipoFormulario = TipoForm.DISCIPLINA;
-            frmFormulario.Show();
+            frmFormulario.ShowDialog();
 
             if (frmFormulario.NuevaEntidadCreada == true)
             {
@@ -62,7 +62,7 @@ namespace Vistas
             Formulario frmFormulario = new Formulario();
             frmFormulario.TipoFormulario = TipoForm.ATLETA;
             frmFormulario.TituloTxt = "Nuevo Atleta";
-            frmFormulario.Show();
+            frmFormulario.ShowDialog();
 
             if (frmFormulario.NuevaEntidadCreada == true)
             {

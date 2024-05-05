@@ -49,5 +49,41 @@ namespace Vistas
                     break;
             }
         }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            switch (TipoFormulario)
+            {
+                case TipoForm.DISCIPLINA:
+                    NuevaDis = new Disciplina();
+                    NuevaDis.Dis_Nombre = TxtDisNombre.Text;
+                    NuevaDis.Dis_Descripcion = TxtDisDescripcion.Text;
+                    break;
+                case TipoForm.CATEGORIA:
+                    NuevaCat = new Categoria();
+                    NuevaCat.Cat_Nombre = TxtCatNombre.Text;
+                    NuevaCat.Cat_Descripcion = TxtCatDescripcion.Text;
+                    break;
+                case TipoForm.ATLETA:
+                    NuevoAtl = new Atleta();
+                    NuevoAtl.Atl_DNI = TxtAtlDNI.Text;
+                    NuevoAtl.Atl_Apellido = TxtAtlApellido.Text;
+                    NuevoAtl.Atl_Nombre = TxtAtlNombre.Text;
+                    NuevoAtl.Atl_Nacionalidad = TxtAtlNacionalidad.Text;
+                    NuevoAtl.Atl_Entrenador = TxtAtlEntrenador.Text;
+                    NuevoAtl.Atl_Genero = TxtAtlGenero.SelectedText.First();
+                    NuevoAtl.Atl_Altura = (double) NumAtlAltura.Value;
+                    NuevoAtl.Atl_Peso = (double) NumAtlPeso.Value;
+                    NuevoAtl.Atl_FechaNac = DateAtlFechaNac.Value;
+                    NuevoAtl.Atl_Direccion = TxtAtlDireccion.Text;
+                    NuevoAtl.Atl_Email = TxtAtlEmail.Text;
+                    break;
+                default:
+                    break;
+            }
+
+            this.NuevaEntidadCreada = true;
+            this.Close();
+        }
     }
 }
