@@ -96,5 +96,14 @@ namespace Vistas
                 errorProvider.SetError(this.TxtContra, string.Empty);
             }
         }
+
+        /// ELIMINAR EN ENTREGA ///
+        private void Login_DoubleClick(object sender, EventArgs e)
+        {   // Saltar autenticación solo para acelarar la etapa de desarrollo
+            MessageBox.Show("Saltando autenticación...", "Interno", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            this.AutenticacionCorrecta = true;
+            this.Close();
+        }
+        ///////////////////////////
     }
 }

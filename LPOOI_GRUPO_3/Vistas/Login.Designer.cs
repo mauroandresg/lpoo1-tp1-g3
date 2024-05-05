@@ -160,6 +160,7 @@
             this.Name = "Login";
             this.Padding = new System.Windows.Forms.Padding(16);
             this.Text = "Login";
+            this.DoubleClick += new System.EventHandler(this.Login_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.PnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
