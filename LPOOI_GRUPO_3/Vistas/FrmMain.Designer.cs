@@ -43,6 +43,9 @@
             this.agregarEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarEventoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarEventoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +56,8 @@
             this.competenciasToolStripMenuItem,
             this.participantesToolStripMenuItem,
             this.eventosToolStripMenuItem,
-            this.eventosToolStripMenuItem1});
+            this.eventosToolStripMenuItem1,
+            this.eventoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(849, 36);
@@ -106,8 +110,9 @@
             this.mostrarEventoToolStripMenuItem});
             this.eventosToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventosToolStripMenuItem1.Name = "eventosToolStripMenuItem1";
-            this.eventosToolStripMenuItem1.Size = new System.Drawing.Size(92, 32);
-            this.eventosToolStripMenuItem1.Text = "Eventos";
+            this.eventosToolStripMenuItem1.Size = new System.Drawing.Size(109, 32);
+            this.eventosToolStripMenuItem1.Text = "Categoria";
+            this.eventosToolStripMenuItem1.Click += new System.EventHandler(this.eventosToolStripMenuItem1_Click);
             // 
             // agregarParticipanteToolStripMenuItem
             // 
@@ -148,14 +153,14 @@
             // agregarEventoToolStripMenuItem
             // 
             this.agregarEventoToolStripMenuItem.Name = "agregarEventoToolStripMenuItem";
-            this.agregarEventoToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
-            this.agregarEventoToolStripMenuItem.Text = "Agregar Evento";
+            this.agregarEventoToolStripMenuItem.Size = new System.Drawing.Size(245, 32);
+            this.agregarEventoToolStripMenuItem.Text = "Agregar Categoria";
             // 
             // mostrarEventoToolStripMenuItem
             // 
             this.mostrarEventoToolStripMenuItem.Name = "mostrarEventoToolStripMenuItem";
-            this.mostrarEventoToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
-            this.mostrarEventoToolStripMenuItem.Text = "Mostrar Evento";
+            this.mostrarEventoToolStripMenuItem.Size = new System.Drawing.Size(245, 32);
+            this.mostrarEventoToolStripMenuItem.Text = "Mostrar Categoria";
             // 
             // salirToolStripMenuItem
             // 
@@ -163,6 +168,28 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 32);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // eventoToolStripMenuItem
+            // 
+            this.eventoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarEventoToolStripMenuItem1,
+            this.mostrarEventoToolStripMenuItem1});
+            this.eventoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eventoToolStripMenuItem.Name = "eventoToolStripMenuItem";
+            this.eventoToolStripMenuItem.Size = new System.Drawing.Size(84, 32);
+            this.eventoToolStripMenuItem.Text = "Evento";
+            // 
+            // agregarEventoToolStripMenuItem1
+            // 
+            this.agregarEventoToolStripMenuItem1.Name = "agregarEventoToolStripMenuItem1";
+            this.agregarEventoToolStripMenuItem1.Size = new System.Drawing.Size(220, 32);
+            this.agregarEventoToolStripMenuItem1.Text = "Agregar Evento";
+            // 
+            // mostrarEventoToolStripMenuItem1
+            // 
+            this.mostrarEventoToolStripMenuItem1.Name = "mostrarEventoToolStripMenuItem1";
+            this.mostrarEventoToolStripMenuItem1.Size = new System.Drawing.Size(220, 32);
+            this.mostrarEventoToolStripMenuItem1.Text = "Mostrar Evento";
             // 
             // FrmMain
             // 
@@ -199,6 +226,9 @@
         private System.Windows.Forms.ToolStripMenuItem agregarEventoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarEventoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eventoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarEventoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem mostrarEventoToolStripMenuItem1;
 
     }
 }

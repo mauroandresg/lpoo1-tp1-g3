@@ -20,5 +20,10 @@ namespace Vistas
         {
             Application.Exit();
         }
+
+        private void eventosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
