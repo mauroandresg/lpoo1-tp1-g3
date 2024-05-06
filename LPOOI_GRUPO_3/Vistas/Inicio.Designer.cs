@@ -116,15 +116,16 @@
             // MItemCatCrear
             // 
             this.MItemCatCrear.Name = "MItemCatCrear";
-            this.MItemCatCrear.Size = new System.Drawing.Size(115, 22);
+            this.MItemCatCrear.Size = new System.Drawing.Size(180, 22);
             this.MItemCatCrear.Text = "Crear";
             this.MItemCatCrear.Click += new System.EventHandler(this.MItemCatCrear_Click);
             // 
             // MItemCatMostrar
             // 
             this.MItemCatMostrar.Name = "MItemCatMostrar";
-            this.MItemCatMostrar.Size = new System.Drawing.Size(115, 22);
+            this.MItemCatMostrar.Size = new System.Drawing.Size(180, 22);
             this.MItemCatMostrar.Text = "Mostrar";
+            this.MItemCatMostrar.Click += new System.EventHandler(this.MItemCatMostrar_Click);
             // 
             // MItemDisciplinas
             // 
@@ -147,6 +148,7 @@
             this.MItemDisMostrar.Name = "MItemDisMostrar";
             this.MItemDisMostrar.Size = new System.Drawing.Size(180, 22);
             this.MItemDisMostrar.Text = "Mostrar";
+            this.MItemDisMostrar.Click += new System.EventHandler(this.MItemDisMostrar_Click);
             // 
             // MItemParticipantes
             // 
@@ -169,6 +171,7 @@
             this.MItemPartMostrar.Name = "MItemPartMostrar";
             this.MItemPartMostrar.Size = new System.Drawing.Size(180, 22);
             this.MItemPartMostrar.Text = "Mostrar";
+            this.MItemPartMostrar.Click += new System.EventHandler(this.MItemPartMostrar_Click);
             // 
             // MItemSistema
             // 

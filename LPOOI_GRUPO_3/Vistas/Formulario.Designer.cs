@@ -33,7 +33,6 @@
             this.PanelAtleta = new System.Windows.Forms.Panel();
             this.NumAtlPeso = new System.Windows.Forms.NumericUpDown();
             this.NumAtlAltura = new System.Windows.Forms.NumericUpDown();
-            this.BtnGuardar = new System.Windows.Forms.Button();
             this.DateAtlFechaNac = new System.Windows.Forms.DateTimePicker();
             this.TxtAtlGenero = new System.Windows.Forms.ComboBox();
             this.TxtAtlEmail = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@
             this.LblAtl2 = new System.Windows.Forms.Label();
             this.TxtAtlDNI = new System.Windows.Forms.TextBox();
             this.LblAtl1 = new System.Windows.Forms.Label();
+            this.BtnGuardar = new System.Windows.Forms.Button();
             this.PanelDisciplina = new System.Windows.Forms.Panel();
             this.TxtDisDescripcion = new System.Windows.Forms.TextBox();
             this.LblDis2 = new System.Windows.Forms.Label();
@@ -138,17 +138,6 @@
             this.NumAtlAltura.Size = new System.Drawing.Size(100, 20);
             this.NumAtlAltura.TabIndex = 29;
             // 
-            // BtnGuardar
-            // 
-            this.BtnGuardar.Location = new System.Drawing.Point(16, 334);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(3, 24, 3, 3);
-            this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.BtnGuardar.TabIndex = 28;
-            this.BtnGuardar.Text = "Guardar";
-            this.BtnGuardar.UseVisualStyleBackColor = true;
-            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
-            // 
             // DateAtlFechaNac
             // 
             this.DateAtlFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -218,7 +207,7 @@
             this.LblAtl8.Name = "LblAtl8";
             this.LblAtl8.Size = new System.Drawing.Size(31, 13);
             this.LblAtl8.TabIndex = 14;
-            this.LblAtl8.Text = "Peso";
+            this.LblAtl8.Text = "Peso (KG)";
             // 
             // LblAtl7
             // 
@@ -227,7 +216,7 @@
             this.LblAtl7.Name = "LblAtl7";
             this.LblAtl7.Size = new System.Drawing.Size(34, 13);
             this.LblAtl7.TabIndex = 12;
-            this.LblAtl7.Text = "Altura";
+            this.LblAtl7.Text = "Altura (Mts)";
             // 
             // LblAtl6
             // 
@@ -317,6 +306,17 @@
             this.LblAtl1.Size = new System.Drawing.Size(26, 13);
             this.LblAtl1.TabIndex = 0;
             this.LblAtl1.Text = "DNI";
+            // 
+            // BtnGuardar
+            // 
+            this.BtnGuardar.Location = new System.Drawing.Point(16, 334);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(3, 24, 3, 3);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.BtnGuardar.TabIndex = 28;
+            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // PanelDisciplina
             // 
@@ -408,6 +408,7 @@
             // 
             // Formulario
             // 
+            this.AcceptButton = this.BtnGuardar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(256, 369);

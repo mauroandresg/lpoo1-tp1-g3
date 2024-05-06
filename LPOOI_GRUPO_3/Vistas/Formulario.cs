@@ -52,38 +52,73 @@ namespace Vistas
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            if (CamposCompletos())
+            {
+                switch (TipoFormulario)
+                {
+                    case TipoForm.DISCIPLINA:
+                        NuevaDis = new Disciplina();
+                        NuevaDis.Dis_Nombre = TxtDisNombre.Text;
+                        NuevaDis.Dis_Descripcion = TxtDisDescripcion.Text;
+                        break;
+                    case TipoForm.CATEGORIA:
+                        NuevaCat = new Categoria();
+                        NuevaCat.Cat_Nombre = TxtCatNombre.Text;
+                        NuevaCat.Cat_Descripcion = TxtCatDescripcion.Text;
+                        break;
+                    case TipoForm.ATLETA:
+                        NuevoAtl = new Atleta();
+                        NuevoAtl.Atl_DNI = TxtAtlDNI.Text;
+                        NuevoAtl.Atl_Apellido = TxtAtlApellido.Text;
+                        NuevoAtl.Atl_Nombre = TxtAtlNombre.Text;
+                        NuevoAtl.Atl_Nacionalidad = TxtAtlNacionalidad.Text;
+                        NuevoAtl.Atl_Entrenador = TxtAtlEntrenador.Text;
+                        if (!string.IsNullOrEmpty(TxtAtlGenero.Text))
+                        {
+                            NuevoAtl.Atl_Genero = TxtAtlGenero.Text.First();
+                        }
+                        NuevoAtl.Atl_Altura = (double)NumAtlAltura.Value;
+                        NuevoAtl.Atl_Peso = (double)NumAtlPeso.Value;
+                        NuevoAtl.Atl_FechaNac = DateAtlFechaNac.Value;
+                        NuevoAtl.Atl_Direccion = TxtAtlDireccion.Text;
+                        NuevoAtl.Atl_Email = TxtAtlEmail.Text;
+                        break;
+                    default:
+                        break;
+                }
+                this.NuevaEntidadCreada = true;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Complete todos los campos!", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool CamposCompletos()
+        {
+            bool resultado = true;
             switch (TipoFormulario)
             {
                 case TipoForm.DISCIPLINA:
-                    NuevaDis = new Disciplina();
-                    NuevaDis.Dis_Nombre = TxtDisNombre.Text;
-                    NuevaDis.Dis_Descripcion = TxtDisDescripcion.Text;
+                    if (string.IsNullOrEmpty(TxtDisNombre.Text) || string.IsNullOrEmpty(TxtDisDescripcion.Text))
+                    { resultado = false; }
                     break;
                 case TipoForm.CATEGORIA:
-                    NuevaCat = new Categoria();
-                    NuevaCat.Cat_Nombre = TxtCatNombre.Text;
-                    NuevaCat.Cat_Descripcion = TxtCatDescripcion.Text;
+                    if (string.IsNullOrEmpty(TxtCatNombre.Text) || string.IsNullOrEmpty(TxtCatDescripcion.Text))
+                    { resultado = false; }
                     break;
                 case TipoForm.ATLETA:
-                    NuevoAtl = new Atleta();
-                    NuevoAtl.Atl_DNI = TxtAtlDNI.Text;
-                    NuevoAtl.Atl_Apellido = TxtAtlApellido.Text;
-                    NuevoAtl.Atl_Nombre = TxtAtlNombre.Text;
-                    NuevoAtl.Atl_Nacionalidad = TxtAtlNacionalidad.Text;
-                    NuevoAtl.Atl_Entrenador = TxtAtlEntrenador.Text;
-                    NuevoAtl.Atl_Genero = TxtAtlGenero.SelectedText.First();
-                    NuevoAtl.Atl_Altura = (double) NumAtlAltura.Value;
-                    NuevoAtl.Atl_Peso = (double) NumAtlPeso.Value;
-                    NuevoAtl.Atl_FechaNac = DateAtlFechaNac.Value;
-                    NuevoAtl.Atl_Direccion = TxtAtlDireccion.Text;
-                    NuevoAtl.Atl_Email = TxtAtlEmail.Text;
-                    break;
-                default:
+                    string[] camposAtleta = { TxtAtlDNI.Text, TxtAtlApellido.Text, TxtAtlNombre.Text, TxtAtlNacionalidad.Text, TxtAtlEntrenador.Text, TxtAtlGenero.Text, TxtAtlDireccion.Text, TxtAtlEmail.Text };
+                    foreach (var item in camposAtleta)
+                    {
+                        if (item.Length == 0) resultado = false;
+                    }
+                    if (NumAtlAltura.Value==0 || NumAtlPeso.Value==0)
+                    { resultado = false; }
                     break;
             }
-
-            this.NuevaEntidadCreada = true;
-            this.Close();
+            return resultado;
         }
     }
 }
