@@ -31,7 +31,7 @@ namespace Vistas
 
 
 
-            FormBienvenida oFormMain = new FormBienvenida();
+            FormPrincipal oFormMain = new FormPrincipal();
 
             if(user1.Usu_NombreUsuario == textName.Text && user1.Usu_contraseña == textPassword.Text){
                 bUserFound = true;
@@ -43,7 +43,8 @@ namespace Vistas
             if (bUserFound)
             {
                 MessageBox.Show("Bienvenido " + textName.Text);
-                oFormMain.Show();
+                oFormMain.ShowDialog();
+                this.Close();
             }
             else
             {
@@ -51,22 +52,7 @@ namespace Vistas
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textName_TextChanged(object sender, EventArgs e)
         {
 
         }

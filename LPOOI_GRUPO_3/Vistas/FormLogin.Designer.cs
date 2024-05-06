@@ -43,7 +43,6 @@
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(254, 45);
             this.textName.TabIndex = 1;
-            this.textName.TextChanged += new System.EventHandler(this.textName_TextChanged);
             // 
             // textPassword
             // 
@@ -75,7 +74,6 @@
             this.user.Size = new System.Drawing.Size(135, 39);
             this.user.TabIndex = 3;
             this.user.Text = "Usuario";
-            this.user.Click += new System.EventHandler(this.label1_Click);
             // 
             // password
             // 

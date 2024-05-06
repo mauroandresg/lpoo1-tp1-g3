@@ -9,11 +9,12 @@ using System.Windows.Forms;
 
 namespace Vistas
 {
-    public partial class FormBienvenida : Form
+    public partial class FormCateg : Form
     {
-        public FormBienvenida()
+        public FormCateg()
         {
             InitializeComponent();
         }
+
     }
 }
