@@ -83,6 +83,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(192, 30);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label1
             // 
@@ -91,7 +92,7 @@
             this.label1.ForeColor = System.Drawing.Color.BlueViolet;
             this.label1.Location = new System.Drawing.Point(146, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 44);
+            this.label1.Size = new System.Drawing.Size(319, 43);
             this.label1.TabIndex = 5;
             this.label1.Text = "BIENVENIDO";
             // 
