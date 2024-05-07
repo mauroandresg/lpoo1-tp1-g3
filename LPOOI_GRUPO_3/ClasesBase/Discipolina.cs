@@ -7,7 +7,7 @@ namespace ClasesBase
 {
     public class Discipolina
     {
-        private string dis_id;
+        private int dis_id;
         private string dis_nombre;
         private string dis_descripcion;
 
@@ -23,7 +23,7 @@ namespace ClasesBase
             set { dis_nombre = value; }
         }
 
-        public string Dis_id
+        public int Dis_id
         {
             get { return dis_id; }
             set { dis_id = value; }

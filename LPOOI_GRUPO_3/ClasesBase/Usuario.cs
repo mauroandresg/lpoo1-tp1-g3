@@ -12,6 +12,10 @@ namespace ClasesBase
         private string usu_contraseña;
         private string usu_ApellidoNombre;
         private int rol_codigo;
+        private int p;
+        private string p_2;
+        private string p_3;
+        private string p_4;
 
         public int Rol_codigo
         {
@@ -43,10 +47,18 @@ namespace ClasesBase
             set { usu_id = value; }
         }
 
-        public Usuario(string username, string password, int rol) {
+        public Usuario(int id, string username, string password, string apellido, int rol) {
+            usu_id = id;
             usu_NombreUsuario = username;
             usu_contraseña = password;
+            usu_ApellidoNombre = apellido;
             rol_codigo = rol;
         }
+
+        public Usuario()
+        {
+
+        }
+
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="FormCateg.Designer.cs">
       <DependentUpon>FormCateg.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisciplina.Designer.cs">
+      <DependentUpon>FormDisciplina.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCateg.resx">
       <DependentUpon>FormCateg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisciplina.resx">
+      <DependentUpon>FormDisciplina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>

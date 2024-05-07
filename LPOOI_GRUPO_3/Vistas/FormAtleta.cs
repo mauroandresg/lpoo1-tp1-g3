@@ -49,13 +49,31 @@ namespace Vistas
             nuevoAtleta.Atl_direccion = textBoxDireccion.Text;
             nuevoAtleta.Alt_email = textBoxEmail.Text;
 
-            atletas.Add(nuevoAtleta);
+            if (nuevoAtleta.Atl_nombre == " " || nuevoAtleta.Atl_apellido == " " ||
+                nuevoAtleta.Atl_dni == " " || nuevoAtleta.Atl_nacionalidad == " " ||
+                nuevoAtleta.Atl_nacionalidad == " " || nuevoAtleta.Atl_entrenador == " " ||
+                nuevoAtleta.Atl_direccion == " " || nuevoAtleta.Alt_email == " ")
+            {
+                MessageBox.Show("Los campos no deben estar vacio");
+            }
+            else
+            {
+                atletas.Add(nuevoAtleta);
 
-            MessageBox.Show("Atleta creado con exito");
-            MessageBox.Show(nuevoAtleta.Atl_nombre + "\n" + nuevoAtleta.Atl_nacionalidad + "\n" + nuevoAtleta.Atl_nacionalidad);
+                MessageBox.Show("Atleta creado con exito");
+                MessageBox.Show("Alteta \n" + "Nombre: " + nuevoAtleta.Atl_nombre + "\n" + "Apellido: " + nuevoAtleta.Atl_apellido + "\n" + "Nacionalidad: " + nuevoAtleta.Atl_nacionalidad + "\n" + "Genero: " + nuevoAtleta.Atl_genero);
 
+                textNombre.Text = " ";
+                textApellido.Text = " ";
+                textBoxDireccion.Text = " ";
+                textBoxEmail.Text = " ";
+                textNacionalidad.Text = " ";
+                textEntrenador.Text = " ";
+                textDNI.Text = " ";
+                numericUpDownAltura.Value = 0;
+                numericUpDownPeso.Value = 0;
+            }
+           
         }
-
-      
     }
 }

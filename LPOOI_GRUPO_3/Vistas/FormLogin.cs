@@ -12,6 +12,15 @@ namespace Vistas
 {
     public partial class FormLogin : Form
     {
+
+            Usuario user1 = new Usuario(1,"juan","123","ca",1);
+            Usuario user2 = new Usuario(2, "maria", "456", "sanchez", 2);
+            Usuario user3 = new Usuario(3, "carlos", "789", "torres", 3);
+      
+            Roles rol1 = new Roles(1, "Administrador");
+            Roles rol2 = new Roles(2, "Vendedor");
+            Roles rol3 = new Roles(3, "Operador");
+
         public FormLogin()
         {
             InitializeComponent();
@@ -19,17 +28,8 @@ namespace Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             Boolean bUserFound = false;
-
-            Usuario user1 = new Usuario("juan","123",1);
-            Usuario user2 = new Usuario("maria", "456",2);
-            Usuario user3 = new Usuario("carlos", "789",3);
-
-            Roles rol1 = new Roles(1, "Administrador");
-            Roles rol2 = new Roles(2, "Vendedor");
-            Roles rol3 = new Roles(3, "Operador");
-
-
 
             FormPrincipal oFormMain = new FormPrincipal();
 
@@ -42,9 +42,8 @@ namespace Vistas
             }
             if (bUserFound)
             {
-                MessageBox.Show("Bienvenido " + textName.Text);
+                MessageBox.Show("Bienvenido "  + textName.Text);
                 oFormMain.ShowDialog();
-                this.Close();
             }
             else
             {

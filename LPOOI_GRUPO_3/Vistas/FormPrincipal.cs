@@ -47,15 +47,10 @@ namespace Vistas
             addForm(f);
         }
 
-        private void verTodosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void crearToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            List<Atleta> listaAtleta = Atleta.ObtenerListaAtleta();
-
-            foreach (Atleta atleta in listaAtleta)
-            {
-                listaAtleta.ToString();
-            }
+            FormDisciplina f = new FormDisciplina();
+            addForm(f);
         }
-
     }
 }
