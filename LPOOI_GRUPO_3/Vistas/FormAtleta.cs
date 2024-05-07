@@ -28,7 +28,7 @@ namespace Vistas
 
             numericUpDownAltura.DecimalPlaces = 2; // Configura el número de decimales
             numericUpDownAltura.Minimum = 0; // Valor mínimo permitido
-            numericUpDownAltura.Maximum = 3; // Valor máximo permitido
+            numericUpDownAltura.Maximum = 100; // Valor máximo permitido
         }
 
         List<Atleta> atletas = new List<Atleta>();
@@ -38,6 +38,7 @@ namespace Vistas
             Atleta nuevoAtleta = new Atleta();
 
             nuevoAtleta.Atl_id = i + 1;
+            i = i + 1;
             nuevoAtleta.Atl_nombre = textNombre.Text;
             nuevoAtleta.Atl_apellido = textApellido.Text;
             nuevoAtleta.Atl_dni = textDNI.Text;
@@ -61,7 +62,16 @@ namespace Vistas
                 atletas.Add(nuevoAtleta);
 
                 MessageBox.Show("Atleta creado con exito");
-                MessageBox.Show("Alteta \n" + "Nombre: " + nuevoAtleta.Atl_nombre + "\n" + "Apellido: " + nuevoAtleta.Atl_apellido + "\n" + "Nacionalidad: " + nuevoAtleta.Atl_nacionalidad + "\n" + "Genero: " + nuevoAtleta.Atl_genero);
+                MessageBox.Show("Alteta \n" + 
+                    "Nombre: " + nuevoAtleta.Atl_nombre + "\n" + 
+                    "Apellido: " + nuevoAtleta.Atl_apellido + "\n" + 
+                    "Nacionalidad: " + nuevoAtleta.Atl_nacionalidad + "\n" + 
+                    "Genero: " + nuevoAtleta.Atl_genero + "\n" +
+                    "Entrenador: " + nuevoAtleta.Atl_entrenador + "\n" +
+                    "Peso: " + nuevoAtleta.Atl_peso + "\n" +
+                    "Altura: " + nuevoAtleta.Atl_altura + "\n" +
+                    "Email: " + nuevoAtleta.Alt_email + "\n" +
+                    "Direccion: " + nuevoAtleta.Atl_direccion);
 
                 textNombre.Text = " ";
                 textApellido.Text = " ";

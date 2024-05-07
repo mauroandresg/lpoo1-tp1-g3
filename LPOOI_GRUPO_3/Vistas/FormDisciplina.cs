@@ -26,6 +26,7 @@ namespace Vistas
             Discipolina nuevaDisciplina = new Discipolina();
 
             nuevaDisciplina.Dis_id = i + 1;
+            i = i + 1;
             nuevaDisciplina.Dis_nombre = textBoxNombre.Text;
             nuevaDisciplina.Dis_descripcion = textBoxDescripcion.Text;
 
@@ -36,7 +37,9 @@ namespace Vistas
             else
             {
                 disciplinas.Add(nuevaDisciplina);
-                MessageBox.Show("Disciplina creada correctamente \n" + "id: " + nuevaDisciplina.Dis_id + "\n" + "Nombre: " + nuevaDisciplina.Dis_nombre + "\n" + "Descripcion: " + nuevaDisciplina.Dis_descripcion);
+                MessageBox.Show("Disciplina creada correctamente \n" + 
+                "Nombre: " + nuevaDisciplina.Dis_nombre + "\n" +
+                "Descripcion: " + nuevaDisciplina.Dis_descripcion);
             }
 
         }

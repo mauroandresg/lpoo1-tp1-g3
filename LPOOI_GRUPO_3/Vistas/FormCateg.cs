@@ -25,6 +25,7 @@ namespace Vistas
             
             Categoria nuevaCat = new Categoria();
             nuevaCat.Cat_id = i + 1;
+            i = i + 1;
             nuevaCat.Cat_nombre = textNombreCat.Text;
             nuevaCat.Cat_descripcion = textDescripcionCat.Text;
 
@@ -36,7 +37,9 @@ namespace Vistas
             {
                 categorias.Add(nuevaCat);
                 MessageBox.Show("Categoria agregada correctamente");
-                MessageBox.Show( "DETALLE"+"\n" + "Nombre de Categoria: " + nuevaCat.Cat_nombre.ToString() + "\n" + "Descripcion: " + nuevaCat.Cat_descripcion.ToString());
+                MessageBox.Show( "DETALLE"+"\n" + 
+                "Nombre de Categoria: " + nuevaCat.Cat_nombre.ToString() + "\n" + 
+                "Descripcion: " + nuevaCat.Cat_descripcion.ToString());
 
                 textNombreCat.Text = " ";
                 textDescripcionCat.Text = " ";
