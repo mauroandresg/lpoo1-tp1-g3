@@ -34,21 +34,25 @@
             this.user = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textName
             // 
+            this.textName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textName.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.textName.Location = new System.Drawing.Point(230, 131);
+            this.textName.Location = new System.Drawing.Point(244, 31);
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(254, 45);
             this.textName.TabIndex = 1;
             // 
             // textPassword
             // 
+            this.textPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textPassword.BackColor = System.Drawing.SystemColors.Window;
             this.textPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.textPassword.Location = new System.Drawing.Point(230, 196);
+            this.textPassword.Location = new System.Drawing.Point(244, 119);
             this.textPassword.Name = "textPassword";
             this.textPassword.Size = new System.Drawing.Size(254, 45);
             this.textPassword.TabIndex = 1;
@@ -56,8 +60,9 @@
             // 
             // buttonAceptar
             // 
+            this.buttonAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.buttonAceptar.Location = new System.Drawing.Point(291, 270);
+            this.buttonAceptar.Location = new System.Drawing.Point(299, 209);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(134, 37);
             this.buttonAceptar.TabIndex = 2;
@@ -67,9 +72,12 @@
             // 
             // user
             // 
+            this.user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.user.AutoSize = true;
+            this.user.BackColor = System.Drawing.Color.Black;
             this.user.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.user.Location = new System.Drawing.Point(12, 137);
+            this.user.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.user.Location = new System.Drawing.Point(26, 34);
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(135, 39);
             this.user.TabIndex = 3;
@@ -77,9 +85,12 @@
             // 
             // password
             // 
+            this.password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.password.AutoSize = true;
+            this.password.BackColor = System.Drawing.Color.Black;
             this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.password.Location = new System.Drawing.Point(16, 202);
+            this.password.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.password.Location = new System.Drawing.Point(26, 125);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(193, 39);
             this.password.TabIndex = 4;
@@ -87,30 +98,45 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(223, 28);
+            this.label1.Location = new System.Drawing.Point(328, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 39);
             this.label1.TabIndex = 5;
             this.label1.Text = "BIENVENIDO";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.password);
+            this.panel1.Controls.Add(this.user);
+            this.panel1.Controls.Add(this.buttonAceptar);
+            this.panel1.Controls.Add(this.textPassword);
+            this.panel1.Controls.Add(this.textName);
+            this.panel1.Location = new System.Drawing.Point(153, 165);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(572, 284);
+            this.panel1.TabIndex = 6;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(689, 434);
+            this.BackColor = System.Drawing.Color.Maroon;
+            this.ClientSize = new System.Drawing.Size(832, 499);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.user);
-            this.Controls.Add(this.buttonAceptar);
-            this.Controls.Add(this.textPassword);
-            this.Controls.Add(this.textName);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Name = "FormLogin";
             this.Text = "FormLogin";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormLogin_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +150,6 @@
         private System.Windows.Forms.Label user;
         private System.Windows.Forms.Label password;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
