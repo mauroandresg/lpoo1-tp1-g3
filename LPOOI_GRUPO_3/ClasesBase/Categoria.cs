@@ -7,9 +7,9 @@ namespace ClasesBase
 {
     public class Categoria
     {
-        private string cat_id;
+        private int cat_id;
 
-        public string Cat_id
+        public int Cat_id
         {
             get { return cat_id; }
             set { cat_id = value; }

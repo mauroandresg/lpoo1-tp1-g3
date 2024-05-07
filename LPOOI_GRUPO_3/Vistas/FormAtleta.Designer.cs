@@ -33,23 +33,43 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textApellido = new System.Windows.Forms.TextBox();
-            this.lbCrearAtleta = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textDNI = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textNacionalidad = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textEntrenador = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxDireccion = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.numericUpDownAltura = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownPeso = new System.Windows.Forms.NumericUpDown();
+            this.comboBoxGenero = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAltura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPeso)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCrearAtleta
             // 
+            this.btnCrearAtleta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCrearAtleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearAtleta.Location = new System.Drawing.Point(94, 256);
+            this.btnCrearAtleta.Location = new System.Drawing.Point(140, 412);
             this.btnCrearAtleta.Name = "btnCrearAtleta";
-            this.btnCrearAtleta.Size = new System.Drawing.Size(204, 44);
+            this.btnCrearAtleta.Size = new System.Drawing.Size(201, 44);
             this.btnCrearAtleta.TabIndex = 0;
             this.btnCrearAtleta.Text = "Crear";
             this.btnCrearAtleta.UseVisualStyleBackColor = true;
+            this.btnCrearAtleta.Click += new System.EventHandler(this.btnCrearAtleta_Click);
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 127);
+            this.label1.Location = new System.Drawing.Point(23, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 1;
@@ -57,8 +77,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 165);
+            this.label2.Location = new System.Drawing.Point(23, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 2;
@@ -66,41 +87,197 @@
             // 
             // textNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(94, 124);
+            this.textNombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textNombre.Location = new System.Drawing.Point(140, 23);
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(204, 20);
+            this.textNombre.Size = new System.Drawing.Size(201, 20);
             this.textNombre.TabIndex = 3;
             // 
             // textApellido
             // 
-            this.textApellido.Location = new System.Drawing.Point(94, 162);
+            this.textApellido.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textApellido.Location = new System.Drawing.Point(140, 61);
             this.textApellido.Name = "textApellido";
-            this.textApellido.Size = new System.Drawing.Size(204, 20);
+            this.textApellido.Size = new System.Drawing.Size(201, 20);
             this.textApellido.TabIndex = 4;
             // 
-            // lbCrearAtleta
+            // label3
             // 
-            this.lbCrearAtleta.AutoSize = true;
-            this.lbCrearAtleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCrearAtleta.Location = new System.Drawing.Point(112, 57);
-            this.lbCrearAtleta.Name = "lbCrearAtleta";
-            this.lbCrearAtleta.Size = new System.Drawing.Size(159, 31);
-            this.lbCrearAtleta.TabIndex = 5;
-            this.lbCrearAtleta.Text = "Crear Atleta";
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "DNI";
             // 
-            // Formulario
+            // textDNI
+            // 
+            this.textDNI.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textDNI.Location = new System.Drawing.Point(140, 100);
+            this.textDNI.Name = "textDNI";
+            this.textDNI.Size = new System.Drawing.Size(201, 20);
+            this.textDNI.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 141);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Nacionalidad";
+            // 
+            // textNacionalidad
+            // 
+            this.textNacionalidad.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textNacionalidad.Location = new System.Drawing.Point(140, 134);
+            this.textNacionalidad.Name = "textNacionalidad";
+            this.textNacionalidad.Size = new System.Drawing.Size(201, 20);
+            this.textNacionalidad.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 171);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Entrenador";
+            // 
+            // textEntrenador
+            // 
+            this.textEntrenador.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textEntrenador.Location = new System.Drawing.Point(140, 171);
+            this.textEntrenador.Name = "textEntrenador";
+            this.textEntrenador.Size = new System.Drawing.Size(201, 20);
+            this.textEntrenador.TabIndex = 11;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxEmail.Location = new System.Drawing.Point(140, 361);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(201, 20);
+            this.textBoxEmail.TabIndex = 21;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(25, 361);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Email";
+            // 
+            // textBoxDireccion
+            // 
+            this.textBoxDireccion.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxDireccion.Location = new System.Drawing.Point(140, 324);
+            this.textBoxDireccion.Name = "textBoxDireccion";
+            this.textBoxDireccion.Size = new System.Drawing.Size(201, 20);
+            this.textBoxDireccion.TabIndex = 19;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(23, 324);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Direccion";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(25, 285);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Genero";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(23, 245);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Peso";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(23, 211);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(34, 13);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Altura";
+            // 
+            // numericUpDownAltura
+            // 
+            this.numericUpDownAltura.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.numericUpDownAltura.Location = new System.Drawing.Point(140, 209);
+            this.numericUpDownAltura.Name = "numericUpDownAltura";
+            this.numericUpDownAltura.Size = new System.Drawing.Size(201, 20);
+            this.numericUpDownAltura.TabIndex = 22;
+            // 
+            // numericUpDownPeso
+            // 
+            this.numericUpDownPeso.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.numericUpDownPeso.Location = new System.Drawing.Point(140, 245);
+            this.numericUpDownPeso.Name = "numericUpDownPeso";
+            this.numericUpDownPeso.Size = new System.Drawing.Size(201, 20);
+            this.numericUpDownPeso.TabIndex = 23;
+            // 
+            // comboBoxGenero
+            // 
+            this.comboBoxGenero.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.comboBoxGenero.FormattingEnabled = true;
+            this.comboBoxGenero.Location = new System.Drawing.Point(140, 285);
+            this.comboBoxGenero.Name = "comboBoxGenero";
+            this.comboBoxGenero.Size = new System.Drawing.Size(201, 21);
+            this.comboBoxGenero.TabIndex = 24;
+            // 
+            // FormAtleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 406);
-            this.Controls.Add(this.lbCrearAtleta);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(784, 493);
+            this.Controls.Add(this.comboBoxGenero);
+            this.Controls.Add(this.numericUpDownPeso);
+            this.Controls.Add(this.numericUpDownAltura);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBoxDireccion);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textEntrenador);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textNacionalidad);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textDNI);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textApellido);
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCrearAtleta);
-            this.Name = "Formulario";
+            this.Name = "FormAtleta";
             this.Text = "Formulario";
+            this.Load += new System.EventHandler(this.FormAtleta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAltura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPeso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,6 +290,21 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.TextBox textApellido;
-        private System.Windows.Forms.Label lbCrearAtleta;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textDNI;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textNacionalidad;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textEntrenador;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxDireccion;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown numericUpDownAltura;
+        private System.Windows.Forms.NumericUpDown numericUpDownPeso;
+        private System.Windows.Forms.ComboBox comboBoxGenero;
     }
 }

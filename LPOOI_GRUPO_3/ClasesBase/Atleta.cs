@@ -98,5 +98,23 @@ namespace ClasesBase
             get { return alt_email; }
             set { alt_email = value; }
         }
+
+        private static List<Atleta> atletas = new List<Atleta>();
+
+        public static List<Atleta> Atletas
+        {
+            get { return atletas; }
+            set { atletas = value; }
+        }
+
+        public static void AgregarAtleta(Atleta nuevoAtleta)
+        {
+            atletas.Add(nuevoAtleta);
+        }
+
+        public static List<Atleta> ObtenerListaAtleta()
+        {
+            return atletas;
+        }
     }
 }
