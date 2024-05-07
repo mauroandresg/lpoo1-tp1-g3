@@ -49,6 +49,7 @@ namespace Vistas
             nuevoAtleta.Atl_genero = comboBoxGenero.SelectedItem.ToString().ToCharArray()[0];
             nuevoAtleta.Atl_direccion = textBoxDireccion.Text;
             nuevoAtleta.Alt_email = textBoxEmail.Text;
+            nuevoAtleta.Atl_fechaNac = dateTimeFechaNac.Value;
 
             if (nuevoAtleta.Atl_nombre == " " || nuevoAtleta.Atl_apellido == " " ||
                 nuevoAtleta.Atl_dni == " " || nuevoAtleta.Atl_nacionalidad == " " ||
@@ -71,7 +72,8 @@ namespace Vistas
                     "Peso: " + nuevoAtleta.Atl_peso + "\n" +
                     "Altura: " + nuevoAtleta.Atl_altura + "\n" +
                     "Email: " + nuevoAtleta.Alt_email + "\n" +
-                    "Direccion: " + nuevoAtleta.Atl_direccion);
+                    "Direccion: " + nuevoAtleta.Atl_direccion + "\n" +
+                    "Fecha de Nacimiento: " + nuevoAtleta.Atl_fechaNac);
 
                 textNombre.Text = " ";
                 textApellido.Text = " ";
@@ -84,6 +86,11 @@ namespace Vistas
                 numericUpDownPeso.Value = 0;
             }
            
+        }
+
+        private void dateTimeFechaNac_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
