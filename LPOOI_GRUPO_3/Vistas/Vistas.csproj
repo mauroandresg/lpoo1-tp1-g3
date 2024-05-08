@@ -48,6 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAgregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarCategoria.Designer.cs">
+      <DependentUpon>FrmAgregarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarDisciplina.Designer.cs">
+      <DependentUpon>FrmAgregarDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarParticipante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarParticipante.Designer.cs">
+      <DependentUpon>FrmAgregarParticipante.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +80,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAgregarCategoria.resx">
+      <DependentUpon>FrmAgregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarDisciplina.resx">
+      <DependentUpon>FrmAgregarDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarParticipante.resx">
+      <DependentUpon>FrmAgregarParticipante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>

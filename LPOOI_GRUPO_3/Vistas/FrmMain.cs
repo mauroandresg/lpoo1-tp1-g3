@@ -21,9 +21,23 @@ namespace Vistas
             Application.Exit();
         }
 
-        private void eventosToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void agregarParticipanteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmAgregarParticipante oFrmAgregarParticipante = new FrmAgregarParticipante();
+            oFrmAgregarParticipante.Show();
         }
+
+        private void agregarDisciplinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAgregarDisciplina oFrmAgregarDisciplina = new FrmAgregarDisciplina();
+            oFrmAgregarDisciplina.Show();
+        }
+
+        private void agregarEventoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAgregarCategoria oFrmAgregarCategoria = new FrmAgregarCategoria();
+            oFrmAgregarCategoria.Show();
+        }
+
     }
 }
