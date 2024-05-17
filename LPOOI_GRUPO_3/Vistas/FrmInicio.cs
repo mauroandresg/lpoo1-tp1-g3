@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Vistas
 {
-    public partial class Inicio : Form
+    public partial class FrmInicio : Form
     {
         Categoria cat;
         Disciplina dis;
         Atleta atl;
 
-        public Inicio()
+        public FrmInicio()
         {
             InitializeComponent();
         }

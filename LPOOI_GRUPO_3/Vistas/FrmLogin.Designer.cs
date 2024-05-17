@@ -1,6 +1,6 @@
 ﻿namespace Vistas
 {
-    partial class Login
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.lblTitulo = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
+            this.LblTitulo = new System.Windows.Forms.Label();
             this.PicLogo = new System.Windows.Forms.PictureBox();
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.LblSubtitulo = new System.Windows.Forms.Label();
@@ -45,16 +45,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblTitulo
+            // LblTitulo
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblTitulo.Location = new System.Drawing.Point(19, 16);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-            this.lblTitulo.Size = new System.Drawing.Size(140, 37);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Bienvenido!";
+            this.LblTitulo.AutoSize = true;
+            this.LblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.LblTitulo.Location = new System.Drawing.Point(19, 16);
+            this.LblTitulo.Name = "LblTitulo";
+            this.LblTitulo.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.LblTitulo.Size = new System.Drawing.Size(140, 37);
+            this.LblTitulo.TabIndex = 0;
+            this.LblTitulo.Text = "Bienvenido!";
             // 
             // PicLogo
             // 
@@ -140,7 +140,7 @@
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
             // 
-            // Login
+            // FrmLogin
             // 
             this.AcceptButton = this.BtnIngresar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,11 +153,11 @@
             this.Controls.Add(this.LblUsuario);
             this.Controls.Add(this.LblSubtitulo);
             this.Controls.Add(this.PnlLogo);
-            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.LblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Login";
+            this.Name = "FrmLogin";
             this.Padding = new System.Windows.Forms.Padding(16);
             this.Text = "Login";
             this.DoubleClick += new System.EventHandler(this.Login_DoubleClick);
@@ -171,7 +171,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label LblTitulo;
         private System.Windows.Forms.PictureBox PicLogo;
         private System.Windows.Forms.Panel PnlLogo;
         private System.Windows.Forms.Label LblSubtitulo;

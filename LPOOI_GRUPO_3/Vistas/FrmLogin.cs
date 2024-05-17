@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Vistas
 {
-    public partial class Login : Form
+    public partial class FrmLogin : Form
     {
         public bool AutenticacionCorrecta { get; private set; } // Propiedad: resultado de autenticación
 
         bool usr_valido = false;
         bool contra_valido = false;
 
-        public Login()
+        public FrmLogin()
         {
             InitializeComponent();
             this.AutenticacionCorrecta = false; // Se obliga a realizar la autenticacion al iniciar el form

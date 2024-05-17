@@ -1,6 +1,6 @@
 ﻿namespace Vistas
 {
-    partial class Inicio
+    partial class FrmInicio
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
-            this.menuSup = new System.Windows.Forms.MenuStrip();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicio));
+            this.MenuSup = new System.Windows.Forms.MenuStrip();
             this.MItemCompetencias = new System.Windows.Forms.ToolStripMenuItem();
             this.MItemEventos = new System.Windows.Forms.ToolStripMenuItem();
             this.MItemLugares = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,21 +47,21 @@
             this.MItemSistema = new System.Windows.Forms.ToolStripMenuItem();
             this.MItemAcerca = new System.Windows.Forms.ToolStripMenuItem();
             this.MItemSalir = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSup.SuspendLayout();
+            this.MenuSup.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuSup
+            // MenuSup
             // 
-            this.menuSup.BackColor = System.Drawing.SystemColors.Window;
-            this.menuSup.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuSup.BackColor = System.Drawing.SystemColors.Window;
+            this.MenuSup.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MItemCompetencias,
             this.MItemAdmin,
             this.MItemSistema});
-            this.menuSup.Location = new System.Drawing.Point(0, 0);
-            this.menuSup.Name = "menuSup";
-            this.menuSup.Size = new System.Drawing.Size(800, 24);
-            this.menuSup.TabIndex = 0;
-            this.menuSup.Text = "menuSup";
+            this.MenuSup.Location = new System.Drawing.Point(0, 0);
+            this.MenuSup.Name = "MenuSup";
+            this.MenuSup.Size = new System.Drawing.Size(800, 24);
+            this.MenuSup.TabIndex = 0;
+            this.MenuSup.Text = "MenuSup";
             // 
             // MItemCompetencias
             // 
@@ -110,20 +110,20 @@
             this.MItemCatCrear,
             this.MItemCatMostrar});
             this.MItemCategorias.Name = "MItemCategorias";
-            this.MItemCategorias.Size = new System.Drawing.Size(180, 22);
+            this.MItemCategorias.Size = new System.Drawing.Size(142, 22);
             this.MItemCategorias.Text = "Categorias";
             // 
             // MItemCatCrear
             // 
             this.MItemCatCrear.Name = "MItemCatCrear";
-            this.MItemCatCrear.Size = new System.Drawing.Size(180, 22);
+            this.MItemCatCrear.Size = new System.Drawing.Size(115, 22);
             this.MItemCatCrear.Text = "Crear";
             this.MItemCatCrear.Click += new System.EventHandler(this.MItemCatCrear_Click);
             // 
             // MItemCatMostrar
             // 
             this.MItemCatMostrar.Name = "MItemCatMostrar";
-            this.MItemCatMostrar.Size = new System.Drawing.Size(180, 22);
+            this.MItemCatMostrar.Size = new System.Drawing.Size(115, 22);
             this.MItemCatMostrar.Text = "Mostrar";
             this.MItemCatMostrar.Click += new System.EventHandler(this.MItemCatMostrar_Click);
             // 
@@ -133,20 +133,20 @@
             this.MItemDisCrear,
             this.MItemDisMostrar});
             this.MItemDisciplinas.Name = "MItemDisciplinas";
-            this.MItemDisciplinas.Size = new System.Drawing.Size(180, 22);
+            this.MItemDisciplinas.Size = new System.Drawing.Size(142, 22);
             this.MItemDisciplinas.Text = "Disciplinas";
             // 
             // MItemDisCrear
             // 
             this.MItemDisCrear.Name = "MItemDisCrear";
-            this.MItemDisCrear.Size = new System.Drawing.Size(180, 22);
+            this.MItemDisCrear.Size = new System.Drawing.Size(115, 22);
             this.MItemDisCrear.Text = "Crear";
             this.MItemDisCrear.Click += new System.EventHandler(this.MItemDisCrear_Click);
             // 
             // MItemDisMostrar
             // 
             this.MItemDisMostrar.Name = "MItemDisMostrar";
-            this.MItemDisMostrar.Size = new System.Drawing.Size(180, 22);
+            this.MItemDisMostrar.Size = new System.Drawing.Size(115, 22);
             this.MItemDisMostrar.Text = "Mostrar";
             this.MItemDisMostrar.Click += new System.EventHandler(this.MItemDisMostrar_Click);
             // 
@@ -156,20 +156,20 @@
             this.MItemPartCrear,
             this.MItemPartMostrar});
             this.MItemParticipantes.Name = "MItemParticipantes";
-            this.MItemParticipantes.Size = new System.Drawing.Size(180, 22);
+            this.MItemParticipantes.Size = new System.Drawing.Size(142, 22);
             this.MItemParticipantes.Text = "Participantes";
             // 
             // MItemPartCrear
             // 
             this.MItemPartCrear.Name = "MItemPartCrear";
-            this.MItemPartCrear.Size = new System.Drawing.Size(180, 22);
+            this.MItemPartCrear.Size = new System.Drawing.Size(115, 22);
             this.MItemPartCrear.Text = "Crear";
             this.MItemPartCrear.Click += new System.EventHandler(this.MItemPartCrear_Click);
             // 
             // MItemPartMostrar
             // 
             this.MItemPartMostrar.Name = "MItemPartMostrar";
-            this.MItemPartMostrar.Size = new System.Drawing.Size(180, 22);
+            this.MItemPartMostrar.Size = new System.Drawing.Size(115, 22);
             this.MItemPartMostrar.Text = "Mostrar";
             this.MItemPartMostrar.Click += new System.EventHandler(this.MItemPartMostrar_Click);
             // 
@@ -198,18 +198,18 @@
             this.MItemSalir.Text = "Salir";
             this.MItemSalir.Click += new System.EventHandler(this.MItemSalir_Click);
             // 
-            // Inicio
+            // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuSup);
+            this.Controls.Add(this.MenuSup);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuSup;
-            this.Name = "Inicio";
+            this.MainMenuStrip = this.MenuSup;
+            this.Name = "FrmInicio";
             this.Text = "Inicio";
-            this.menuSup.ResumeLayout(false);
-            this.menuSup.PerformLayout();
+            this.MenuSup.ResumeLayout(false);
+            this.MenuSup.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,7 +217,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuSup;
+        private System.Windows.Forms.MenuStrip MenuSup;
         private System.Windows.Forms.ToolStripMenuItem MItemSistema;
         private System.Windows.Forms.ToolStripMenuItem MItemCompetencias;
         private System.Windows.Forms.ToolStripMenuItem MItemAcerca;
