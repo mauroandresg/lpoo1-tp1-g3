@@ -10,7 +10,7 @@ namespace ClasesBase
         public int Atl_ID { get; set; }
         public string Atl_DNI { get; set; }
         public string Atl_Apellido { get; set; }
-        public string Atle_Nombre { get; set; }
+        public string Atl_Nombre { get; set; }
         public string Atl_Nacionalidad { get; set; }
         public string Atl_Entrenador { get; set; }
         public string Atl_Genero { get; set; }
