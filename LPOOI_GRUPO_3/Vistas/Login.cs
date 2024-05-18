@@ -48,7 +48,9 @@ namespace Vistas
             if (bUsuarioBuscado)
             {
                 MessageBox.Show(String.Format("Bienvenido {0}, tu rol es: {1}", txtUsuario.Text, rolUsuario));
-                this.Close();
+                Principal principalForm = new Principal();
+                principalForm.Show();
+                this.Hide();
             }
             else if (txtUsuario.Text != usuario1.Usu_NombreUsuario && txtUsuario.Text != usuario2.Usu_NombreUsuario && txtUsuario.Text != usuario3.Usu_NombreUsuario)
             {
