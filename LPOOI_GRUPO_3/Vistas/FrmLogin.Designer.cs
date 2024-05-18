@@ -114,7 +114,7 @@
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(140, 20);
             this.TxtUsuario.TabIndex = 6;
-            this.TxtUsuario.Validated += new System.EventHandler(this.TxtUsuario_Validated);
+            this.TxtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.TxtUsuario_Validating);
             // 
             // LblContra
             // 
@@ -132,7 +132,7 @@
             this.TxtContra.Size = new System.Drawing.Size(140, 20);
             this.TxtContra.TabIndex = 8;
             this.TxtContra.UseSystemPasswordChar = true;
-            this.TxtContra.Validated += new System.EventHandler(this.TxtContra_Validated);
+            this.TxtContra.Validating += new System.ComponentModel.CancelEventHandler(this.TxtContra_Validating);
             // 
             // errorProvider
             // 
