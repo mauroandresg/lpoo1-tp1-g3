@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAgregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarCategoria.Designer.cs">
+      <DependentUpon>FormAgregarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAgregarDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarDisciplina.Designer.cs">
+      <DependentUpon>FormAgregarDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAgregarParticipante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarParticipante.Designer.cs">
+      <DependentUpon>FormAgregarParticipante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +81,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -72,6 +93,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
