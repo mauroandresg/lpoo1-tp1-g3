@@ -18,7 +18,7 @@ namespace Vistas
             FrmLogin formLogin = new FrmLogin();
             Application.Run(formLogin); // Se lanza la pantalla para login
 
-            if (formLogin.AutenticacionCorrecta == true) // Si la autenticacion fue exitosa
+            if (formLogin.AutenticacionRealizada == true) // Si la autenticacion fue exitosa
             {
                 Application.Run(new FrmInicio()); // Se lanza la pantalla inicial
             }
