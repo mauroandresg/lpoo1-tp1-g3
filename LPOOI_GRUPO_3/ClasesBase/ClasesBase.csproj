@@ -42,10 +42,10 @@
   <ItemGroup>
     <Compile Include="Atleta.cs" />
     <Compile Include="Categoria.cs" />
-    <Compile Include="comdepDataSet.Designer.cs">
+    <Compile Include="ComdepDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>comdepDataSet.xsd</DependentUpon>
+      <DependentUpon>ComdepDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Competencia.cs" />
     <Compile Include="Disciplina.cs" />
@@ -57,20 +57,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Roles.cs" />
+    <Compile Include="TrabajarRoles.cs" />
+    <Compile Include="TrabajarUsuario.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="comdepDataSet.xsc">
-      <DependentUpon>comdepDataSet.xsd</DependentUpon>
+    <None Include="ComdepDataSet.xsc">
+      <DependentUpon>ComdepDataSet.xsd</DependentUpon>
     </None>
-    <None Include="comdepDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>comdepDataSet.Designer.cs</LastGenOutput>
+    <None Include="ComdepDataSet.xsd">
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComdepDataSet.Designer.cs</LastGenOutput>
     </None>
-    <None Include="comdepDataSet.xss">
-      <DependentUpon>comdepDataSet.xsd</DependentUpon>
+    <None Include="ComdepDataSet.xss">
+      <DependentUpon>ComdepDataSet.xsd</DependentUpon>
     </None>
     <None Include="DiagramaClases.cd" />
     <None Include="Properties\Settings.settings">

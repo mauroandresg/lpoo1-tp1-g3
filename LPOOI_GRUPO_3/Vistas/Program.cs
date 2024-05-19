@@ -16,11 +16,12 @@ namespace Vistas
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             FrmLogin formLogin = new FrmLogin();
-            Application.Run(formLogin); // Se lanza la pantalla para login
+            Application.Run(formLogin); // Se lanza la vista FrmLogin
 
-            if (formLogin.AutenticacionRealizada == true) // Si la autenticacion fue exitosa
+            if (formLogin.AutenticacionRealizada == true)
             {
-                Application.Run(new FrmInicio()); // Se lanza la pantalla inicial
+                FrmInicio frmInicio = new FrmInicio();
+                Application.Run(new FrmInicio()); // Se lanza la vista FrmInicio solo si la autenticación se realizó
             }
         }
     }

@@ -13,6 +13,7 @@ namespace Vistas
     public partial class FrmLogin : Form
     {
         public bool AutenticacionRealizada { get; private set; } // Propiedad: resultado de autenticación
+        public string RolUsuario { get; private set; } // Propiedad: Rol del usurio autenticado
 
         bool usuarioValido = false;
         bool contraValida = false;
@@ -27,7 +28,23 @@ namespace Vistas
         {
             if (usuarioValido && contraValida)
             {
-                // Implementar validacion usando la BD
+                if (TrabajarUsuario.Autenticar(TxtUsuario.Text, TxtContra.Text)==true)
+                {
+                    ComdepDataSet.UsuarioRow rUsuario = TrabajarUsuario.BuscarExpandido(TxtUsuario.Text, TxtContra.Text);
+
+                    string mensaje = "Bienvenido "+ rUsuario.ApellidoNombre+"! \nEstá ingresando como "+rUsuario.RolesRow.Descripcion+", desea continuar?";
+                    DialogResult result = MessageBox.Show(mensaje, "Credenciales Aceptadas", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        this.AutenticacionRealizada = true; // Se guarda el resultado de la autenticacion
+                        this.RolUsuario = rUsuario.RolesRow.Descripcion; // Se guarda el Rol del usuario autenticado
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña invalidos...", "Credenciales Denegadas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             } else
             {
                 ValidarUsuario();
@@ -75,13 +92,12 @@ namespace Vistas
         }
 
 
-        /// ELIMINAR EN ENTREGA ///
+        //// ELIMINAR EN ENTREGA ////
         private void Login_DoubleClick(object sender, EventArgs e)
         {   // Saltar autenticación solo para acelarar la etapa de desarrollo
             MessageBox.Show("Saltando autenticación...", "Interno", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             this.AutenticacionRealizada = true;
             this.Close();
         }
-        ///////////////////////////
     }
 }
