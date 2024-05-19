@@ -20,9 +20,9 @@ namespace ClasesBase {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("comdepDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ComdepDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class comdepDataSet : global::System.Data.DataSet {
+    public partial class ComdepDataSet : global::System.Data.DataSet {
         
         private AtletaDataTable tableAtleta;
         
@@ -52,7 +52,7 @@ namespace ClasesBase {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public comdepDataSet() {
+        public ComdepDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -63,7 +63,7 @@ namespace ClasesBase {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected comdepDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ComdepDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -227,7 +227,7 @@ namespace ClasesBase {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            comdepDataSet cln = ((comdepDataSet)(base.Clone()));
+            ComdepDataSet cln = ((ComdepDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -358,9 +358,9 @@ namespace ClasesBase {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "comdepDataSet";
+            this.DataSetName = "ComdepDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/comdepDataSet.xsd";
+            this.Namespace = "http://tempuri.org/ComdepDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableAtleta = new AtletaDataTable();
@@ -452,7 +452,7 @@ namespace ClasesBase {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            comdepDataSet ds = new comdepDataSet();
+            ComdepDataSet ds = new ComdepDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -882,7 +882,7 @@ namespace ClasesBase {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                comdepDataSet ds = new comdepDataSet();
+                ComdepDataSet ds = new ComdepDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1206,7 +1206,7 @@ namespace ClasesBase {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                comdepDataSet ds = new comdepDataSet();
+                ComdepDataSet ds = new ComdepDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1498,7 +1498,7 @@ namespace ClasesBase {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                comdepDataSet ds = new comdepDataSet();
+                ComdepDataSet ds = new ComdepDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1912,7 +1912,7 @@ namespace ClasesBase {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                comdepDataSet ds = new comdepDataSet();
+                ComdepDataSet ds = new ComdepDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2204,7 +2204,7 @@ namespace ClasesBase {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                comdepDataSet ds = new comdepDataSet();
+                ComdepDataSet ds = new ComdepDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2543,7 +2543,7 @@ namespace ClasesBase {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                comdepDataSet ds = new comdepDataSet();
+                ComdepDataSet ds = new ComdepDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2820,7 +2820,7 @@ namespace ClasesBase {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                comdepDataSet ds = new comdepDataSet();
+                ComdepDataSet ds = new ComdepDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4390,7 +4390,7 @@ namespace ClasesBase {
         }
     }
 }
-namespace ClasesBase.comdepDataSetTableAdapters {
+namespace ClasesBase.ComdepDataSetTableAdapters {
     
     
     /// <summary>
@@ -4634,7 +4634,7 @@ SELECT ID, Dni, Apellido, Nombre, Nacionalidad, Entrenador, Genero, Altura, Peso
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(comdepDataSet.AtletaDataTable dataTable) {
+        public virtual int Fill(ComdepDataSet.AtletaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4647,9 +4647,9 @@ SELECT ID, Dni, Apellido, Nombre, Nacionalidad, Entrenador, Genero, Altura, Peso
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual comdepDataSet.AtletaDataTable GetData() {
+        public virtual ComdepDataSet.AtletaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            comdepDataSet.AtletaDataTable dataTable = new comdepDataSet.AtletaDataTable();
+            ComdepDataSet.AtletaDataTable dataTable = new ComdepDataSet.AtletaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4657,14 +4657,14 @@ SELECT ID, Dni, Apellido, Nombre, Nacionalidad, Entrenador, Genero, Altura, Peso
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet.AtletaDataTable dataTable) {
+        public virtual int Update(ComdepDataSet.AtletaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet dataSet) {
+        public virtual int Update(ComdepDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Atleta");
         }
         
@@ -5305,7 +5305,7 @@ SELECT ID, NombreUsuario, Contrasenia, ApellidoNombre, Rol_Codigo FROM Usuario W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(comdepDataSet.UsuarioDataTable dataTable) {
+        public virtual int Fill(ComdepDataSet.UsuarioDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5318,9 +5318,9 @@ SELECT ID, NombreUsuario, Contrasenia, ApellidoNombre, Rol_Codigo FROM Usuario W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual comdepDataSet.UsuarioDataTable GetData() {
+        public virtual ComdepDataSet.UsuarioDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            comdepDataSet.UsuarioDataTable dataTable = new comdepDataSet.UsuarioDataTable();
+            ComdepDataSet.UsuarioDataTable dataTable = new ComdepDataSet.UsuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5328,14 +5328,14 @@ SELECT ID, NombreUsuario, Contrasenia, ApellidoNombre, Rol_Codigo FROM Usuario W
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet.UsuarioDataTable dataTable) {
+        public virtual int Update(ComdepDataSet.UsuarioDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet dataSet) {
+        public virtual int Update(ComdepDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Usuario");
         }
         
@@ -5722,7 +5722,7 @@ SELECT ID, Nombre, Descripcion FROM Categoria WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(comdepDataSet.CategoriaDataTable dataTable) {
+        public virtual int Fill(ComdepDataSet.CategoriaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5735,9 +5735,9 @@ SELECT ID, Nombre, Descripcion FROM Categoria WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual comdepDataSet.CategoriaDataTable GetData() {
+        public virtual ComdepDataSet.CategoriaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            comdepDataSet.CategoriaDataTable dataTable = new comdepDataSet.CategoriaDataTable();
+            ComdepDataSet.CategoriaDataTable dataTable = new ComdepDataSet.CategoriaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5745,14 +5745,14 @@ SELECT ID, Nombre, Descripcion FROM Categoria WHERE (ID = @ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet.CategoriaDataTable dataTable) {
+        public virtual int Update(ComdepDataSet.CategoriaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet dataSet) {
+        public virtual int Update(ComdepDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Categoria");
         }
         
@@ -6136,7 +6136,7 @@ SELECT ID, Nombre, Descripcion, FechaInicio, FechaFin, Estado, Organizador, Ubic
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(comdepDataSet.CompetenciaDataTable dataTable) {
+        public virtual int Fill(ComdepDataSet.CompetenciaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6149,9 +6149,9 @@ SELECT ID, Nombre, Descripcion, FechaInicio, FechaFin, Estado, Organizador, Ubic
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual comdepDataSet.CompetenciaDataTable GetData() {
+        public virtual ComdepDataSet.CompetenciaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            comdepDataSet.CompetenciaDataTable dataTable = new comdepDataSet.CompetenciaDataTable();
+            ComdepDataSet.CompetenciaDataTable dataTable = new ComdepDataSet.CompetenciaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6159,14 +6159,14 @@ SELECT ID, Nombre, Descripcion, FechaInicio, FechaFin, Estado, Organizador, Ubic
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet.CompetenciaDataTable dataTable) {
+        public virtual int Update(ComdepDataSet.CompetenciaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet dataSet) {
+        public virtual int Update(ComdepDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Competencia");
         }
         
@@ -6764,7 +6764,7 @@ SELECT ID, Nombre, Descripcion FROM Disciplina WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(comdepDataSet.DisciplinaDataTable dataTable) {
+        public virtual int Fill(ComdepDataSet.DisciplinaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6777,9 +6777,9 @@ SELECT ID, Nombre, Descripcion FROM Disciplina WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual comdepDataSet.DisciplinaDataTable GetData() {
+        public virtual ComdepDataSet.DisciplinaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            comdepDataSet.DisciplinaDataTable dataTable = new comdepDataSet.DisciplinaDataTable();
+            ComdepDataSet.DisciplinaDataTable dataTable = new ComdepDataSet.DisciplinaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6787,14 +6787,14 @@ SELECT ID, Nombre, Descripcion FROM Disciplina WHERE (ID = @ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet.DisciplinaDataTable dataTable) {
+        public virtual int Update(ComdepDataSet.DisciplinaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet dataSet) {
+        public virtual int Update(ComdepDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Disciplina");
         }
         
@@ -7143,7 +7143,7 @@ SELECT ID, Com_ID, Atl_ID, Estado, HoraInicio, HoraFin FROM Evento WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(comdepDataSet.EventoDataTable dataTable) {
+        public virtual int Fill(ComdepDataSet.EventoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7156,9 +7156,9 @@ SELECT ID, Com_ID, Atl_ID, Estado, HoraInicio, HoraFin FROM Evento WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual comdepDataSet.EventoDataTable GetData() {
+        public virtual ComdepDataSet.EventoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            comdepDataSet.EventoDataTable dataTable = new comdepDataSet.EventoDataTable();
+            ComdepDataSet.EventoDataTable dataTable = new ComdepDataSet.EventoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7166,14 +7166,14 @@ SELECT ID, Com_ID, Atl_ID, Estado, HoraInicio, HoraFin FROM Evento WHERE (ID = @
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet.EventoDataTable dataTable) {
+        public virtual int Update(ComdepDataSet.EventoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet dataSet) {
+        public virtual int Update(ComdepDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Evento");
         }
         
@@ -7579,7 +7579,7 @@ SELECT Codigo, Descripcion FROM Roles WHERE (Codigo = @Codigo)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(comdepDataSet.RolesDataTable dataTable) {
+        public virtual int Fill(ComdepDataSet.RolesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7592,9 +7592,9 @@ SELECT Codigo, Descripcion FROM Roles WHERE (Codigo = @Codigo)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual comdepDataSet.RolesDataTable GetData() {
+        public virtual ComdepDataSet.RolesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            comdepDataSet.RolesDataTable dataTable = new comdepDataSet.RolesDataTable();
+            ComdepDataSet.RolesDataTable dataTable = new ComdepDataSet.RolesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7602,14 +7602,14 @@ SELECT Codigo, Descripcion FROM Roles WHERE (Codigo = @Codigo)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet.RolesDataTable dataTable) {
+        public virtual int Update(ComdepDataSet.RolesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(comdepDataSet dataSet) {
+        public virtual int Update(ComdepDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Roles");
         }
         
@@ -7960,7 +7960,7 @@ SELECT Codigo, Descripcion FROM Roles WHERE (Codigo = @Codigo)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(comdepDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ComdepDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._categoriaTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Categoria.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -8033,7 +8033,7 @@ SELECT Codigo, Descripcion FROM Roles WHERE (Codigo = @Codigo)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(comdepDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ComdepDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._categoriaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Categoria.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -8099,7 +8099,7 @@ SELECT Codigo, Descripcion FROM Roles WHERE (Codigo = @Codigo)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(comdepDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ComdepDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._eventoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Evento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -8189,7 +8189,7 @@ SELECT Codigo, Descripcion FROM Roles WHERE (Codigo = @Codigo)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(comdepDataSet dataSet) {
+        public virtual int UpdateAll(ComdepDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
