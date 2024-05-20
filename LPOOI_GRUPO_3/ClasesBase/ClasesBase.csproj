@@ -57,6 +57,11 @@
   <ItemGroup>
     <Compile Include="Atleta.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="comdepDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>comdepDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Competencia.cs" />
     <Compile Include="Disciplina.cs" />
     <Compile Include="Evento.cs" />
@@ -72,6 +77,17 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="ClassDiagramCompetencias.cd" />
+    <None Include="comdepDataSet.xsc">
+      <DependentUpon>comdepDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="comdepDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>comdepDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="comdepDataSet.xss">
+      <DependentUpon>comdepDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
