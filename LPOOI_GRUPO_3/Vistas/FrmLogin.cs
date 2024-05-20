@@ -30,7 +30,7 @@ namespace Vistas
             {
                 if (TrabajarUsuario.Autenticar(TxtUsuario.Text, TxtContra.Text)==true)
                 {
-                    DataRow dr = TrabajarUsuario.Buscar(TxtUsuario.Text, TxtContra.Text);
+                    DataRow dr = TrabajarUsuario.BuscarSingular(TxtUsuario.Text, TxtContra.Text);
                     Usuario u = TrabajarUsuario.ToUsuario(dr);
                     string mensaje = "Bienvenido "+u.Usu_ApellidoNombre+"! \nDesea continuar?";
                     DialogResult result = MessageBox.Show(mensaje, "Credenciales Aceptadas", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
