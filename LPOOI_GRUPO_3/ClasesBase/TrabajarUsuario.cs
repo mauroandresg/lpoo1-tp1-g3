@@ -12,10 +12,7 @@ namespace ClasesBase
     {
         static string cadenaConexion = ClasesBase.Properties.Settings.Default.comdepConnectionString;
 
-        /// <summary>
-        /// Busca en la tabla Usuario y devuelve el registro que coincida en Nombre de Usuario y Contraseña 
-        /// </summary>
-        public static ComdepDataSet.UsuarioRow Buscar(string nombreUsuario, string contrasenia)
+        public static DataRow Buscar(string nombreUsuario, string contrasenia)
         {
             SqlConnection cnn = new SqlConnection(cadenaConexion);
             SqlCommand cmd = new SqlCommand();
@@ -26,53 +23,35 @@ namespace ClasesBase
             cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-            ComdepDataSet ds = new ComdepDataSet();
-            da.Fill(ds, "Usuario");
-            if (ds.Usuario.Count==0) {
-                return null;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Select().Length==1) {
+                return dt.Select().First();
             } else {
-                return ds.Usuario.First();
+                return null;
             }
+            
         }
 
-        /// <summary>
-        /// Dado el Nombre de usuario y Contraseña, busca en la tabla Usuario y verifica que existan las credenciales.
-        /// Si existe devuelve verdadero, de lo contrario devuelve falso.
-        /// </summary>
         public static bool Autenticar(string nombreUsuario, string contrasenia)
         {
-            ComdepDataSet.UsuarioRow buscado = Buscar(nombreUsuario, contrasenia);
-            if (buscado != null) {
+            DataRow dr = Buscar(nombreUsuario, contrasenia);
+            if (dr!=null) {
                 return true;
             } else {
                 return false;
             }
         }
 
-        /// <summary>
-        /// Busca en la tabla Usuario y devuelve el registro que coincida en Nombre de Usuario y Contraseña.
-        /// Además, carga los datos de las tablas relacionadas a Usuario: Roles
-        /// </summary>
-        public static ComdepDataSet.UsuarioRow BuscarExpandido(string nombreUsuario, string contrasenia)
+        public static Usuario ToUsuario(DataRow dr)
         {
-            ComdepDataSet ds = new ComdepDataSet();
-            SqlConnection cnn = new SqlConnection(cadenaConexion);
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Usuario WHERE NombreUsuario=@usuario AND Contrasenia=@contra";
-            cmd.Parameters.AddWithValue("@usuario", nombreUsuario);
-            cmd.Parameters.AddWithValue("@contra", contrasenia);
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(ds, "Usuario");
-            da = new SqlDataAdapter("SELECT * FROM Roles", cnn);
-            da.Fill(ds, "Roles");
-            if (ds.Usuario.Count == 0) {
-                return null;
-            } else {
-                return ds.Usuario.First();
-            }
+            Usuario oUsuario = new Usuario();
+            oUsuario.Usu_ID = (int) dr["ID"];
+            oUsuario.Usu_NombreUsuario = (string) dr["NombreUsuario"];
+            oUsuario.Usu_Contrasenia = (string) dr["Contrasenia"];
+            oUsuario.Usu_ApellidoNombre = (string) dr["ApellidoNombre"];
+            oUsuario.Rol_Codigo = (int) dr["Rol_Codigo"];
+            return oUsuario;
         }
     }
 }

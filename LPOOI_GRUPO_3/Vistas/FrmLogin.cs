@@ -13,7 +13,7 @@ namespace Vistas
     public partial class FrmLogin : Form
     {
         public bool AutenticacionRealizada { get; private set; } // Propiedad: resultado de autenticación
-        public string RolUsuario { get; private set; } // Propiedad: Rol del usurio autenticado
+        public int CodigoRol { get; private set; } // Propiedad: Codigo de Rol del usurio autenticado
 
         bool usuarioValido = false;
         bool contraValida = false;
@@ -30,14 +30,14 @@ namespace Vistas
             {
                 if (TrabajarUsuario.Autenticar(TxtUsuario.Text, TxtContra.Text)==true)
                 {
-                    ComdepDataSet.UsuarioRow rUsuario = TrabajarUsuario.BuscarExpandido(TxtUsuario.Text, TxtContra.Text);
-
-                    string mensaje = "Bienvenido "+ rUsuario.ApellidoNombre+"! \nEstá ingresando como "+rUsuario.RolesRow.Descripcion+", desea continuar?";
+                    DataRow dr = TrabajarUsuario.Buscar(TxtUsuario.Text, TxtContra.Text);
+                    Usuario u = TrabajarUsuario.ToUsuario(dr);
+                    string mensaje = "Bienvenido "+u.Usu_ApellidoNombre+"! \nDesea continuar?";
                     DialogResult result = MessageBox.Show(mensaje, "Credenciales Aceptadas", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
                         this.AutenticacionRealizada = true; // Se guarda el resultado de la autenticacion
-                        this.RolUsuario = rUsuario.RolesRow.Descripcion; // Se guarda el Rol del usuario autenticado
+                        this.CodigoRol = u.Rol_Codigo; // Se guarda el Rol del usuario autenticado
                         this.Close();
                     }
                 }
