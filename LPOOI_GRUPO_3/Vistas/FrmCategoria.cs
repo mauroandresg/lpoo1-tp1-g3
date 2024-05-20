@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Vistas
 {
-    public partial class FrmAltaDisciplina : Form
+    public partial class FrmCategoria : Form
     {
-        Disciplina oDisciplina = new Disciplina();
+        Categoria oCategoria = new Categoria();
 
-        public FrmAltaDisciplina()
+        public FrmCategoria()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace Vistas
 
         private bool CamposCompletos()
         {
-            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtDescripcion.Text))
+            if (string.IsNullOrEmpty(TxtNombre.Text) || string.IsNullOrEmpty(TxtDescripcion.Text))
             {
                 return false;
             }

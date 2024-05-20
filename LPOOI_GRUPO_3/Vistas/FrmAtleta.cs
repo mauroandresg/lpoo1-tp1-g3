@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Vistas
 {
-    public partial class FrmAltaCategoria : Form
+    public partial class FrmAtleta : Form
     {
-        Categoria oCategoria = new Categoria();
+        Atleta oAtleta = new Atleta();
 
-        public FrmAltaCategoria()
+        public FrmAtleta()
         {
             InitializeComponent();
         }
@@ -33,11 +33,18 @@ namespace Vistas
 
         private bool CamposCompletos()
         {
-            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtDescripcion.Text))
+            if (string.IsNullOrEmpty(TxtDni.Text)
+                || string.IsNullOrEmpty(TxtApellido.Text)
+                || string.IsNullOrEmpty(TxtNacionalidad.Text)
+                || string.IsNullOrEmpty(TxtNacionalidad.Text)
+                || string.IsNullOrEmpty(TxtEntrenador.Text)
+                || string.IsNullOrEmpty(TxtGenero.Text)
+                || string.IsNullOrEmpty(TxtDireccion.Text)
+                || string.IsNullOrEmpty(TxtEmail.Text)
+                || (NumAltura.Value <= 0) || (NumPeso.Value <= 0))
             {
                 return false;
-            }
-            else
+            } else
             {
                 return true;
             }

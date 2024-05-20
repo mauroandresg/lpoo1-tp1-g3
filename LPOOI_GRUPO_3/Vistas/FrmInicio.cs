@@ -62,19 +62,19 @@ namespace Vistas
 
         private void MItemGesCategoria_Click(object sender, EventArgs e)
         {
-            FrmAltaCategoria frmCategoria = new FrmAltaCategoria();
+            FrmCategoria frmCategoria = new FrmCategoria();
             frmCategoria.Show();
         }
 
         private void MItemGesDisciplina_Click(object sender, EventArgs e)
         {
-            FrmAltaDisciplina frmDisciplina = new FrmAltaDisciplina();
+            FrmDisciplina frmDisciplina = new FrmDisciplina();
             frmDisciplina.Show();
         }
 
         private void MItemGesAtleta_Click(object sender, EventArgs e)
         {
-            FrmAltaParticipante frmParticipante = new FrmAltaParticipante();
+            FrmAtleta frmParticipante = new FrmAtleta();
             frmParticipante.Show();
         }
 
