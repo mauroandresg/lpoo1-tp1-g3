@@ -92,5 +92,10 @@ namespace Vistas
         {
 
         }
+
+        private void comboBoxGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

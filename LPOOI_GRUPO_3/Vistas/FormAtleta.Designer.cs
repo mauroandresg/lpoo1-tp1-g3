@@ -286,6 +286,7 @@
             this.comboBoxGenero.Size = new System.Drawing.Size(201, 24);
             this.comboBoxGenero.TabIndex = 24;
             this.comboBoxGenero.Text = "M";
+            this.comboBoxGenero.SelectedIndexChanged += new System.EventHandler(this.comboBoxGenero_SelectedIndexChanged);
             // 
             // label11
             // 

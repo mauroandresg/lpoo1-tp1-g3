@@ -52,5 +52,11 @@ namespace Vistas
             FormDisciplina f = new FormDisciplina();
             addForm(f);
         }
+
+        private void crearToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            FormUsuario f = new FormUsuario();
+            addForm(f);
+        }
     }
 }

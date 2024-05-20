@@ -59,6 +59,10 @@
     <Compile Include="Categoria.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Competencia.cs" />
+    <Compile Include="competenciaDataSet.cs">
+      <DependentUpon>competenciaDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="competenciaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,6 +78,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Roles.cs" />
+    <Compile Include="TrabajarUsuario.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
