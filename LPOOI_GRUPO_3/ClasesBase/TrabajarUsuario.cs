@@ -75,6 +75,7 @@ namespace ClasesBase
             
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText += "SELECT ";
+            cmd.CommandText += " usu_id as 'Usuario id', ";
             cmd.CommandText += " rol_descripcion as 'Rol', ";
             cmd.CommandText += " usu_apellidoNombre as 'Nombre y Apellido ', ";
             cmd.CommandText += " usu_nombreUsuario as 'Usuario', usu_contraseña as 'Contraseña'";
@@ -98,5 +99,42 @@ namespace ClasesBase
 
             return dt;
         }
+        public static void eliminarUsuario(int usu_id)
+        {
+            using (SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.competenciaConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "DELETE FROM Usuario WHERE usu_id = @id";
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = cnn;
+
+                cmd.Parameters.AddWithValue("@id", usu_id);
+
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+                cnn.Close();
+            }
+        }
+
+        public static void modificarUsuario(Usuario user)
+        {
+            using (SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.competenciaConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "UPDATE Usuario SET usu_nombreUsuario = @user, usu_contraseña = @pass, usu_apellidoNombre = @nomYape WHERE usu_id = @id";
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = cnn;
+
+                cmd.Parameters.AddWithValue("@user", user.Usu_NombreUsuario);
+                cmd.Parameters.AddWithValue("@pass", user.Usu_contraseña);
+                cmd.Parameters.AddWithValue("@nomYape", user.Usu_ApellidoNombre);
+                cmd.Parameters.AddWithValue("@id", user.Usu_id);
+
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+                cnn.Close();
+            }
+        }
+
     }
 }

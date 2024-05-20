@@ -42,6 +42,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.dataGridViewUsuarios = new System.Windows.Forms.DataGridView();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxUserId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,12 +153,13 @@
             // 
             // buttonModificar
             // 
-            this.buttonModificar.Location = new System.Drawing.Point(422, 368);
+            this.buttonModificar.Location = new System.Drawing.Point(366, 368);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(75, 23);
             this.buttonModificar.TabIndex = 13;
             this.buttonModificar.Text = "MODIFICAR";
             this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // dataGridViewUsuarios
             // 
@@ -166,11 +170,40 @@
             this.dataGridViewUsuarios.TabIndex = 14;
             this.dataGridViewUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuarios_SelectionChanged);
             // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.Location = new System.Drawing.Point(447, 368);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEliminar.TabIndex = 15;
+            this.buttonEliminar.Text = "ELIMINAR";
+            this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click_1);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(303, 199);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "user id";
+            // 
+            // textBoxUserId
+            // 
+            this.textBoxUserId.Location = new System.Drawing.Point(401, 199);
+            this.textBoxUserId.Name = "textBoxUserId";
+            this.textBoxUserId.Size = new System.Drawing.Size(121, 20);
+            this.textBoxUserId.TabIndex = 17;
+            // 
             // FormModificarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 403);
+            this.Controls.Add(this.textBoxUserId);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.dataGridViewUsuarios);
             this.Controls.Add(this.buttonModificar);
             this.Controls.Add(this.label6);
@@ -209,5 +242,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.DataGridView dataGridViewUsuarios;
+        private System.Windows.Forms.Button buttonEliminar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxUserId;
     }
 }
