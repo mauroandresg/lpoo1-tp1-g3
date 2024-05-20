@@ -58,7 +58,7 @@ namespace ClasesBase
             cmd.CommandText = "SELECT Rol_Codigo as 'Rol', ";
             cmd.CommandText += "ApellidoNombre as 'Apellido y Nombre', ";
             cmd.CommandText += "NombreUsuario as 'Usuario', ";
-            cmd.CommandText += "Contrasenia as 'Contraseña' ";
+            cmd.CommandText += "Contrasenia as 'Contraseña', ";
             cmd.CommandText += "U.ID as 'ID Usuario', ";
             cmd.CommandText += "U.Rol_Codigo as 'Codigo Rol' ";
             cmd.CommandText += "FROM Usuario as U ";
