@@ -102,6 +102,7 @@
             this.Controls.Add(this.LblNombre);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.LblTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmCategoria";
             this.Text = "Categorías";
             this.ResumeLayout(false);

@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.GBoxDatos = new System.Windows.Forms.GroupBox();
-            this.LblRol = new System.Windows.Forms.Label();
-            this.LblApellidoNombre = new System.Windows.Forms.Label();
-            this.LblUsuario = new System.Windows.Forms.Label();
-            this.LblContrasenia = new System.Windows.Forms.Label();
-            this.TxtApellidoNombre = new System.Windows.Forms.TextBox();
-            this.TxtUsuario = new System.Windows.Forms.TextBox();
-            this.TxtContrasenia = new System.Windows.Forms.TextBox();
-            this.BtnGuardar = new System.Windows.Forms.Button();
             this.ComRol = new System.Windows.Forms.ComboBox();
+            this.TxtContrasenia = new System.Windows.Forms.TextBox();
+            this.TxtUsuario = new System.Windows.Forms.TextBox();
+            this.TxtApellidoNombre = new System.Windows.Forms.TextBox();
+            this.LblContrasenia = new System.Windows.Forms.Label();
+            this.LblUsuario = new System.Windows.Forms.Label();
+            this.LblApellidoNombre = new System.Windows.Forms.Label();
+            this.LblRol = new System.Windows.Forms.Label();
+            this.BtnGuardar = new System.Windows.Forms.Button();
             this.DGridUsuario = new System.Windows.Forms.DataGridView();
             this.TxtBuscador = new System.Windows.Forms.TextBox();
             this.BtnBuscardor = new System.Windows.Forms.Button();
+            this.LblTitulo = new System.Windows.Forms.Label();
             this.GBoxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGridUsuario)).BeginInit();
             this.SuspendLayout();
@@ -63,25 +64,43 @@
             this.GBoxDatos.TabStop = false;
             this.GBoxDatos.Text = "Datos del Usuario";
             // 
-            // LblRol
+            // ComRol
             // 
-            this.LblRol.AutoSize = true;
-            this.LblRol.Location = new System.Drawing.Point(11, 37);
-            this.LblRol.Margin = new System.Windows.Forms.Padding(3, 16, 3, 24);
-            this.LblRol.Name = "LblRol";
-            this.LblRol.Size = new System.Drawing.Size(23, 13);
-            this.LblRol.TabIndex = 0;
-            this.LblRol.Text = "Rol";
+            this.ComRol.FormattingEnabled = true;
+            this.ComRol.Location = new System.Drawing.Point(139, 34);
+            this.ComRol.Name = "ComRol";
+            this.ComRol.Size = new System.Drawing.Size(150, 21);
+            this.ComRol.TabIndex = 3;
             // 
-            // LblApellidoNombre
+            // TxtContrasenia
             // 
-            this.LblApellidoNombre.AutoSize = true;
-            this.LblApellidoNombre.Location = new System.Drawing.Point(11, 74);
-            this.LblApellidoNombre.Margin = new System.Windows.Forms.Padding(3, 0, 3, 24);
-            this.LblApellidoNombre.Name = "LblApellidoNombre";
-            this.LblApellidoNombre.Size = new System.Drawing.Size(92, 13);
-            this.LblApellidoNombre.TabIndex = 1;
-            this.LblApellidoNombre.Text = "Apellido y Nombre";
+            this.TxtContrasenia.Location = new System.Drawing.Point(139, 145);
+            this.TxtContrasenia.Name = "TxtContrasenia";
+            this.TxtContrasenia.Size = new System.Drawing.Size(150, 20);
+            this.TxtContrasenia.TabIndex = 7;
+            // 
+            // TxtUsuario
+            // 
+            this.TxtUsuario.Location = new System.Drawing.Point(139, 108);
+            this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.Size = new System.Drawing.Size(150, 20);
+            this.TxtUsuario.TabIndex = 6;
+            // 
+            // TxtApellidoNombre
+            // 
+            this.TxtApellidoNombre.Location = new System.Drawing.Point(139, 71);
+            this.TxtApellidoNombre.Name = "TxtApellidoNombre";
+            this.TxtApellidoNombre.Size = new System.Drawing.Size(150, 20);
+            this.TxtApellidoNombre.TabIndex = 5;
+            // 
+            // LblContrasenia
+            // 
+            this.LblContrasenia.AutoSize = true;
+            this.LblContrasenia.Location = new System.Drawing.Point(11, 148);
+            this.LblContrasenia.Name = "LblContrasenia";
+            this.LblContrasenia.Size = new System.Drawing.Size(61, 13);
+            this.LblContrasenia.TabIndex = 3;
+            this.LblContrasenia.Text = "Contraseña";
             // 
             // LblUsuario
             // 
@@ -93,35 +112,25 @@
             this.LblUsuario.TabIndex = 2;
             this.LblUsuario.Text = "Nombre de Usuario";
             // 
-            // LblContrasenia
+            // LblApellidoNombre
             // 
-            this.LblContrasenia.AutoSize = true;
-            this.LblContrasenia.Location = new System.Drawing.Point(11, 148);
-            this.LblContrasenia.Name = "LblContrasenia";
-            this.LblContrasenia.Size = new System.Drawing.Size(61, 13);
-            this.LblContrasenia.TabIndex = 3;
-            this.LblContrasenia.Text = "Contraseña";
+            this.LblApellidoNombre.AutoSize = true;
+            this.LblApellidoNombre.Location = new System.Drawing.Point(11, 74);
+            this.LblApellidoNombre.Margin = new System.Windows.Forms.Padding(3, 0, 3, 24);
+            this.LblApellidoNombre.Name = "LblApellidoNombre";
+            this.LblApellidoNombre.Size = new System.Drawing.Size(92, 13);
+            this.LblApellidoNombre.TabIndex = 1;
+            this.LblApellidoNombre.Text = "Apellido y Nombre";
             // 
-            // TxtApellidoNombre
+            // LblRol
             // 
-            this.TxtApellidoNombre.Location = new System.Drawing.Point(139, 71);
-            this.TxtApellidoNombre.Name = "TxtApellidoNombre";
-            this.TxtApellidoNombre.Size = new System.Drawing.Size(150, 20);
-            this.TxtApellidoNombre.TabIndex = 5;
-            // 
-            // TxtUsuario
-            // 
-            this.TxtUsuario.Location = new System.Drawing.Point(139, 108);
-            this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(150, 20);
-            this.TxtUsuario.TabIndex = 6;
-            // 
-            // TxtContrasenia
-            // 
-            this.TxtContrasenia.Location = new System.Drawing.Point(139, 145);
-            this.TxtContrasenia.Name = "TxtContrasenia";
-            this.TxtContrasenia.Size = new System.Drawing.Size(150, 20);
-            this.TxtContrasenia.TabIndex = 7;
+            this.LblRol.AutoSize = true;
+            this.LblRol.Location = new System.Drawing.Point(11, 37);
+            this.LblRol.Margin = new System.Windows.Forms.Padding(3, 16, 3, 24);
+            this.LblRol.Name = "LblRol";
+            this.LblRol.Size = new System.Drawing.Size(23, 13);
+            this.LblRol.TabIndex = 0;
+            this.LblRol.Text = "Rol";
             // 
             // BtnGuardar
             // 
@@ -134,37 +143,29 @@
             this.BtnGuardar.UseVisualStyleBackColor = true;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
-            // ComRol
-            // 
-            this.ComRol.FormattingEnabled = true;
-            this.ComRol.Location = new System.Drawing.Point(139, 34);
-            this.ComRol.Name = "ComRol";
-            this.ComRol.Size = new System.Drawing.Size(150, 21);
-            this.ComRol.TabIndex = 3;
-            // 
             // DGridUsuario
             // 
             this.DGridUsuario.AllowUserToAddRows = false;
             this.DGridUsuario.AllowUserToDeleteRows = false;
             this.DGridUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGridUsuario.Location = new System.Drawing.Point(19, 45);
+            this.DGridUsuario.Location = new System.Drawing.Point(19, 77);
             this.DGridUsuario.Margin = new System.Windows.Forms.Padding(3, 3, 16, 3);
             this.DGridUsuario.Name = "DGridUsuario";
             this.DGridUsuario.ReadOnly = true;
-            this.DGridUsuario.Size = new System.Drawing.Size(443, 386);
+            this.DGridUsuario.Size = new System.Drawing.Size(443, 354);
             this.DGridUsuario.TabIndex = 2;
             this.DGridUsuario.CurrentCellChanged += new System.EventHandler(this.DGridUsuario_CurrentCellChanged);
             // 
             // TxtBuscador
             // 
-            this.TxtBuscador.Location = new System.Drawing.Point(19, 18);
+            this.TxtBuscador.Location = new System.Drawing.Point(19, 51);
             this.TxtBuscador.Name = "TxtBuscador";
             this.TxtBuscador.Size = new System.Drawing.Size(307, 20);
             this.TxtBuscador.TabIndex = 3;
             // 
             // BtnBuscardor
             // 
-            this.BtnBuscardor.Location = new System.Drawing.Point(332, 16);
+            this.BtnBuscardor.Location = new System.Drawing.Point(332, 49);
             this.BtnBuscardor.Name = "BtnBuscardor";
             this.BtnBuscardor.Size = new System.Drawing.Size(130, 23);
             this.BtnBuscardor.TabIndex = 4;
@@ -172,11 +173,23 @@
             this.BtnBuscardor.UseVisualStyleBackColor = true;
             this.BtnBuscardor.Click += new System.EventHandler(this.BtnBuscardor_Click);
             // 
+            // LblTitulo
+            // 
+            this.LblTitulo.AutoSize = true;
+            this.LblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo.Location = new System.Drawing.Point(19, 16);
+            this.LblTitulo.Name = "LblTitulo";
+            this.LblTitulo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.LblTitulo.Size = new System.Drawing.Size(83, 32);
+            this.LblTitulo.TabIndex = 5;
+            this.LblTitulo.Text = "Usuarios";
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LblTitulo);
             this.Controls.Add(this.BtnBuscardor);
             this.Controls.Add(this.TxtBuscador);
             this.Controls.Add(this.DGridUsuario);
@@ -185,7 +198,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmUsuario";
             this.Padding = new System.Windows.Forms.Padding(16);
-            this.Text = "FrmUsuario";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.FrmUsuario_Load);
             this.GBoxDatos.ResumeLayout(false);
             this.GBoxDatos.PerformLayout();
@@ -210,5 +223,6 @@
         private System.Windows.Forms.DataGridView DGridUsuario;
         private System.Windows.Forms.TextBox TxtBuscador;
         private System.Windows.Forms.Button BtnBuscardor;
+        private System.Windows.Forms.Label LblTitulo;
     }
 }

@@ -63,9 +63,9 @@
             this.LblTitulo.Location = new System.Drawing.Point(12, 9);
             this.LblTitulo.Name = "LblTitulo";
             this.LblTitulo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.LblTitulo.Size = new System.Drawing.Size(107, 32);
+            this.LblTitulo.Size = new System.Drawing.Size(56, 32);
             this.LblTitulo.TabIndex = 0;
-            this.LblTitulo.Text = "Participante";
+            this.LblTitulo.Text = "Atleta";
             // 
             // BtnAgregar
             // 
@@ -285,6 +285,7 @@
             this.Controls.Add(this.TxtDni);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.LblTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmAtleta";
             this.Text = "Atletas";
             ((System.ComponentModel.ISupportInitialize)(this.NumAltura)).EndInit();
