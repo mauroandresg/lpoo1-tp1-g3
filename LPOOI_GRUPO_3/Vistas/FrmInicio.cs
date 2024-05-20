@@ -21,15 +21,15 @@ namespace Vistas
 
         private void FrmInicio_Load(object sender, EventArgs e)
         {
-            foreach (ToolStripItem item in MItemGestionar.DropDownItems)
-            {
-                item.Enabled = false;
-            }
             AdministrarAcceso();
         }
 
         private void AdministrarAcceso()
         {
+            foreach (ToolStripItem item in MItemGestionar.DropDownItems)
+            {
+                item.Enabled = false;
+            }
             switch (CodigoRol)
             {
                 case 1: // Administrador
@@ -76,6 +76,12 @@ namespace Vistas
         {
             FrmAltaParticipante frmParticipante = new FrmAltaParticipante();
             frmParticipante.Show();
+        }
+
+        private void MItemGesUsuario_Click(object sender, EventArgs e)
+        {
+            FrmUsuario frmUsuario = new FrmUsuario();
+            frmUsuario.Show();
         }
     }
 }

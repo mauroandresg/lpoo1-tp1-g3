@@ -16,10 +16,12 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(cadenaConexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT Rol_Codigo as 'Rol', ";
-            cmd.CommandText += "ApellidoNombre as 'Apellido y Nombre', ";
-            cmd.CommandText += "NombreUsuario as 'Usuario', ";
-            cmd.CommandText += "Contrasenia as 'Contraseña' ";
+            cmd.CommandText = "SELECT R.Descripcion as 'Rol', ";
+            cmd.CommandText += "U.ApellidoNombre as 'Apellido y Nombre', ";
+            cmd.CommandText += "U.NombreUsuario as 'Usuario', ";
+            cmd.CommandText += "U.Contrasenia as 'Contraseña', ";
+            cmd.CommandText += "U.ID as 'ID Usuario', ";
+            cmd.CommandText += "U.Rol_Codigo as 'Codigo Rol' ";
             cmd.CommandText += "FROM Usuario as U ";
             cmd.CommandText += "LEFT JOIN Roles as R ON (R.Codigo=U.Rol_Codigo) ";
             cmd.CommandType = CommandType.Text;
@@ -57,6 +59,8 @@ namespace ClasesBase
             cmd.CommandText += "ApellidoNombre as 'Apellido y Nombre', ";
             cmd.CommandText += "NombreUsuario as 'Usuario', ";
             cmd.CommandText += "Contrasenia as 'Contraseña' ";
+            cmd.CommandText += "U.ID as 'ID Usuario', ";
+            cmd.CommandText += "U.Rol_Codigo as 'Codigo Rol' ";
             cmd.CommandText += "FROM Usuario as U ";
             cmd.CommandText += "LEFT JOIN Roles as R ON (R.Codigo=U.Rol_Codigo) ";
 

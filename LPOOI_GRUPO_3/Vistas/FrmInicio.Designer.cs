@@ -32,13 +32,13 @@
             this.MenuSup = new System.Windows.Forms.MenuStrip();
             this.MItemGestionar = new System.Windows.Forms.ToolStripMenuItem();
             this.MItemGesCategoria = new System.Windows.Forms.ToolStripMenuItem();
+            this.MItemGesDisciplina = new System.Windows.Forms.ToolStripMenuItem();
             this.MItemGesAtleta = new System.Windows.Forms.ToolStripMenuItem();
+            this.MItemGesCompeticion = new System.Windows.Forms.ToolStripMenuItem();
+            this.MItemGesUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.MItemSistema = new System.Windows.Forms.ToolStripMenuItem();
             this.MItemSisAcerca = new System.Windows.Forms.ToolStripMenuItem();
             this.MItemSisSalir = new System.Windows.Forms.ToolStripMenuItem();
-            this.MItemGesDisciplina = new System.Windows.Forms.ToolStripMenuItem();
-            this.MItemGesUsuario = new System.Windows.Forms.ToolStripMenuItem();
-            this.MItemGesCompeticion = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuSup.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,12 +73,32 @@
             this.MItemGesCategoria.Text = "Categorias";
             this.MItemGesCategoria.Click += new System.EventHandler(this.MItemGesCategoria_Click);
             // 
+            // MItemGesDisciplina
+            // 
+            this.MItemGesDisciplina.Name = "MItemGesDisciplina";
+            this.MItemGesDisciplina.Size = new System.Drawing.Size(180, 22);
+            this.MItemGesDisciplina.Text = "Disciplinas";
+            this.MItemGesDisciplina.Click += new System.EventHandler(this.MItemGesDisciplina_Click);
+            // 
             // MItemGesAtleta
             // 
             this.MItemGesAtleta.Name = "MItemGesAtleta";
             this.MItemGesAtleta.Size = new System.Drawing.Size(180, 22);
             this.MItemGesAtleta.Text = "Atletas";
             this.MItemGesAtleta.Click += new System.EventHandler(this.MItemGesAtleta_Click);
+            // 
+            // MItemGesCompeticion
+            // 
+            this.MItemGesCompeticion.Name = "MItemGesCompeticion";
+            this.MItemGesCompeticion.Size = new System.Drawing.Size(180, 22);
+            this.MItemGesCompeticion.Text = "Competiciones";
+            // 
+            // MItemGesUsuario
+            // 
+            this.MItemGesUsuario.Name = "MItemGesUsuario";
+            this.MItemGesUsuario.Size = new System.Drawing.Size(180, 22);
+            this.MItemGesUsuario.Text = "Usuarios";
+            this.MItemGesUsuario.Click += new System.EventHandler(this.MItemGesUsuario_Click);
             // 
             // MItemSistema
             // 
@@ -104,25 +124,6 @@
             this.MItemSisSalir.Size = new System.Drawing.Size(185, 22);
             this.MItemSisSalir.Text = "Salir";
             this.MItemSisSalir.Click += new System.EventHandler(this.MItemSalir_Click);
-            // 
-            // MItemGesDisciplina
-            // 
-            this.MItemGesDisciplina.Name = "MItemGesDisciplina";
-            this.MItemGesDisciplina.Size = new System.Drawing.Size(180, 22);
-            this.MItemGesDisciplina.Text = "Disciplinas";
-            this.MItemGesDisciplina.Click += new System.EventHandler(this.MItemGesDisciplina_Click);
-            // 
-            // MItemGesUsuario
-            // 
-            this.MItemGesUsuario.Name = "MItemGesUsuario";
-            this.MItemGesUsuario.Size = new System.Drawing.Size(180, 22);
-            this.MItemGesUsuario.Text = "Usuarios";
-            // 
-            // MItemGesCompeticion
-            // 
-            this.MItemGesCompeticion.Name = "MItemGesCompeticion";
-            this.MItemGesCompeticion.Size = new System.Drawing.Size(180, 22);
-            this.MItemGesCompeticion.Text = "Competiciones";
             // 
             // FrmInicio
             // 
