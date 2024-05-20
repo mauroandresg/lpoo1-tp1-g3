@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="comdepDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>comdepDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormAgregarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +86,9 @@
     <EmbeddedResource Include="FormAgregarCategoria.resx">
       <DependentUpon>FormAgregarCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarDisciplina.resx">
+      <DependentUpon>FormAgregarDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarParticipante.resx">
       <DependentUpon>FormAgregarParticipante.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,7 +107,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="comdepDataSet.xsc">
+      <DependentUpon>comdepDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="comdepDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>comdepDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="comdepDataSet.xss">
+      <DependentUpon>comdepDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
