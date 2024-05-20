@@ -39,6 +39,9 @@
             this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.dataGridViewUsuarios = new System.Windows.Forms.DataGridView();
+            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.textPattern = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,16 +134,46 @@
             // 
             this.dataGridViewUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUsuarios.Location = new System.Drawing.Point(437, 104);
+            this.dataGridViewUsuarios.Location = new System.Drawing.Point(402, 197);
             this.dataGridViewUsuarios.Name = "dataGridViewUsuarios";
-            this.dataGridViewUsuarios.Size = new System.Drawing.Size(299, 167);
+            this.dataGridViewUsuarios.Size = new System.Drawing.Size(394, 207);
             this.dataGridViewUsuarios.TabIndex = 10;
+            // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.Location = new System.Drawing.Point(259, 457);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.TabIndex = 11;
+            this.buttonBuscar.Text = "BUSCAR";
+            this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            // 
+            // textPattern
+            // 
+            this.textPattern.Location = new System.Drawing.Point(237, 394);
+            this.textPattern.Name = "textPattern";
+            this.textPattern.Size = new System.Drawing.Size(121, 20);
+            this.textPattern.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 392);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(204, 40);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Inserte Nombre de Usuario \r\na Buscar";
             // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 413);
+            this.ClientSize = new System.Drawing.Size(808, 533);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textPattern);
+            this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.dataGridViewUsuarios);
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.comboBoxRol);
@@ -174,5 +207,8 @@
         private System.Windows.Forms.ComboBox comboBoxRol;
         private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.DataGridView dataGridViewUsuarios;
+        private System.Windows.Forms.Button buttonBuscar;
+        private System.Windows.Forms.TextBox textPattern;
+        private System.Windows.Forms.Label label6;
     }
 }

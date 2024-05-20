@@ -58,5 +58,17 @@ namespace Vistas
             FormUsuario f = new FormUsuario();
             addForm(f);
         }
+
+        private void eliminarToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            FormUsuario f = new FormUsuario();
+            addForm(f);
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormModificarUsuario f = new FormModificarUsuario();
+            addForm(f);
+        }
     }
 }

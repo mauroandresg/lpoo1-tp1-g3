@@ -68,5 +68,35 @@ namespace ClasesBase
 
             return dt;
         }
+
+        public static DataTable buscarUsuario(string sPattern)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.competenciaConnectionString);
+            
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText += "SELECT ";
+            cmd.CommandText += " rol_descripcion as 'Rol', ";
+            cmd.CommandText += " usu_apellidoNombre as 'Nombre y Apellido ', ";
+            cmd.CommandText += " usu_nombreUsuario as 'Usuario', usu_contraseña as 'Contraseña'";
+            cmd.CommandText += " FROM Usuario as U";
+            cmd.CommandText += " LEFT JOIN Roles as R ON (R.rol_id = U.rol_codigo)";
+
+            cmd.CommandText += " WHERE";
+            cmd.CommandText += " usu_nombreUsuario LIKE @pattern";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
+
+            //Ejecutar la consola
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }

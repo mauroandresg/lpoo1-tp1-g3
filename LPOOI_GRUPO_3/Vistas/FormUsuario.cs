@@ -49,8 +49,33 @@ namespace Vistas
            oUser.Usu_NombreUsuario = textBoxUser.Text;
            oUser.Usu_contraseña = textBoxPass.Text;
 
-           TrabajarUsuario.insertarUsuario(oUser);
-           load_usuarios();
+           if (textBoxNomYape.Text == "" || textBoxUser.Text == "" || textBoxPass.Text == "")
+           {
+               MessageBox.Show("Los campos no deben estar vacios");
+           }
+           else
+           {
+               TrabajarUsuario.insertarUsuario(oUser);
+               textBoxNomYape.Text = "";
+               textBoxUser.Text = "";
+               textBoxPass.Text = "";
+               MessageBox.Show("Usuario guardado correctamente");
+               load_usuarios();
+           }
+           
+       }
+
+       private void buttonBuscar_Click(object sender, EventArgs e)
+       {
+           if (textPattern.Text != "")
+           {
+               dataGridViewUsuarios.DataSource = TrabajarUsuario.buscarUsuario(textPattern.Text);
+           }
+           else
+           {
+               MessageBox.Show("Nombre de usuario a buscar no debe estar vacio");
+               load_usuarios();
+           }
        }
     }
 }
