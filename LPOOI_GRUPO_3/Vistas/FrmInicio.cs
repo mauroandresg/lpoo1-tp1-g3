@@ -12,14 +12,47 @@ namespace Vistas
 {
     public partial class FrmInicio : Form
     {
+        public int CodigoRol { get; set; }
+
         public FrmInicio()
         {
             InitializeComponent();
         }
 
+        private void FrmInicio_Load(object sender, EventArgs e)
+        {
+            foreach (ToolStripItem item in MItemGestionar.DropDownItems)
+            {
+                item.Enabled = false;
+            }
+            AdministrarAcceso();
+        }
+
+        private void AdministrarAcceso()
+        {
+            switch (CodigoRol)
+            {
+                case 1: // Administrador
+                    MItemGesUsuario.Enabled = true;
+                    break;
+                case 2: // Operador
+                    MItemGesAtleta.Enabled = true;
+                    MItemGesCompeticion.Enabled = true;
+                    break;
+                case 3: // Auditor
+                    foreach (ToolStripItem item in MItemGestionar.DropDownItems)
+                    {
+                        item.Enabled = true;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
         private void MItemAcerca_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sport Flow - version 0.1 \nDesarrollado por grupo LPOO1-G3");
+            MessageBox.Show("Sport Flow - version 0.2 \nDesarrollado por grupo LPOO1-G3");
         }
 
         private void MItemSalir_Click(object sender, EventArgs e)
@@ -27,37 +60,22 @@ namespace Vistas
             Application.Exit();
         }
 
-        private void MItemCatCrear_Click(object sender, EventArgs e)
+        private void MItemGesCategoria_Click(object sender, EventArgs e)
         {
             FrmAltaCategoria frmCategoria = new FrmAltaCategoria();
             frmCategoria.Show();
         }
 
-        private void MItemDisCrear_Click(object sender, EventArgs e)
+        private void MItemGesDisciplina_Click(object sender, EventArgs e)
         {
             FrmAltaDisciplina frmDisciplina = new FrmAltaDisciplina();
             frmDisciplina.Show();
         }
 
-        private void MItemPartCrear_Click(object sender, EventArgs e)
+        private void MItemGesAtleta_Click(object sender, EventArgs e)
         {
             FrmAltaParticipante frmParticipante = new FrmAltaParticipante();
             frmParticipante.Show();
-        }
-
-        private void MItemCatMostrar_Click(object sender, EventArgs e)
-        {
-            // Implementar usando la BD
-        }
-
-        private void MItemDisMostrar_Click(object sender, EventArgs e)
-        {
-            // Implementar usando la BD
-        }
-
-        private void MItemPartMostrar_Click(object sender, EventArgs e)
-        {
-            // Implementar usando la BD
         }
     }
 }
