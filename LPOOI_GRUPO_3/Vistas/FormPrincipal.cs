@@ -70,5 +70,11 @@ namespace Vistas
             FormModificarUsuario f = new FormModificarUsuario();
             addForm(f);
         }
+
+        private void modificarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormModificarAtleta f = new FormModificarAtleta();
+            addForm(f);
+        }
     }
 }

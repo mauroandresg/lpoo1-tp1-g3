@@ -31,61 +31,43 @@ namespace Vistas
             numericUpDownAltura.Maximum = 100; // Valor máximo permitido
         }
 
-        List<Atleta> atletas = new List<Atleta>();
-        int i = 0;
         private void btnCrearAtleta_Click(object sender, EventArgs e)
         {
-            Atleta nuevoAtleta = new Atleta();
 
-            nuevoAtleta.Atl_id = i + 1;
-            i = i + 1;
-            nuevoAtleta.Atl_nombre = textNombre.Text;
-            nuevoAtleta.Atl_apellido = textApellido.Text;
-            nuevoAtleta.Atl_dni = textDNI.Text;
-            nuevoAtleta.Atl_nacionalidad = textNacionalidad.Text;
-            nuevoAtleta.Atl_entrenador = textEntrenador.Text;
-            nuevoAtleta.Atl_peso = (float)numericUpDownPeso.Value;
-            nuevoAtleta.Atl_altura = (float)numericUpDownAltura.Value;
-            nuevoAtleta.Atl_genero = comboBoxGenero.SelectedItem.ToString().ToCharArray()[0];
-            nuevoAtleta.Atl_direccion = textBoxDireccion.Text;
-            nuevoAtleta.Alt_email = textBoxEmail.Text;
-            nuevoAtleta.Atl_fechaNac = dateTimeFechaNac.Value;
+            Atleta atleta = new Atleta();
 
-            if (nuevoAtleta.Atl_nombre == " " || nuevoAtleta.Atl_apellido == " " ||
-                nuevoAtleta.Atl_dni == " " || nuevoAtleta.Atl_nacionalidad == " " ||
-                nuevoAtleta.Atl_nacionalidad == " " || nuevoAtleta.Atl_entrenador == " " ||
-                nuevoAtleta.Atl_direccion == " " || nuevoAtleta.Alt_email == " ")
+            atleta.Atl_nombre = textNombre.Text;
+            atleta.Atl_apellido = textApellido.Text;
+            atleta.Atl_dni = textDNI.Text;
+            atleta.Atl_genero = Convert.ToChar(comboBoxGenero.Text);
+            atleta.Atl_nacionalidad = textNacionalidad.Text;
+            atleta.Atl_direccion = textBoxDireccion.Text;
+            atleta.Atl_email = textBoxEmail.Text;
+            atleta.Atl_altura = Convert.ToDouble(numericUpDownAltura.Value);
+            atleta.Atl_peso = Convert.ToDouble(numericUpDownPeso.Value);
+            atleta.Atl_fechaNac = dateTimeFechaNac.Value;
+
+            if (textNombre.Text == "" || textApellido.Text == "" || textDNI.Text == "")
             {
-                MessageBox.Show("Los campos no deben estar vacio");
+                MessageBox.Show("Los campos no deben estar vacios");
             }
             else
             {
-                atletas.Add(nuevoAtleta);
+                TrabajarAtleta.guardarAtleta(atleta);
 
-                MessageBox.Show("Atleta creado con exito");
-                MessageBox.Show("Alteta \n" + 
-                    "Nombre: " + nuevoAtleta.Atl_nombre + "\n" + 
-                    "Apellido: " + nuevoAtleta.Atl_apellido + "\n" + 
-                    "Nacionalidad: " + nuevoAtleta.Atl_nacionalidad + "\n" + 
-                    "Genero: " + nuevoAtleta.Atl_genero + "\n" +
-                    "Entrenador: " + nuevoAtleta.Atl_entrenador + "\n" +
-                    "Peso: " + nuevoAtleta.Atl_peso + "\n" +
-                    "Altura: " + nuevoAtleta.Atl_altura + "\n" +
-                    "Email: " + nuevoAtleta.Alt_email + "\n" +
-                    "Direccion: " + nuevoAtleta.Atl_direccion + "\n" +
-                    "Fecha de Nacimiento: " + nuevoAtleta.Atl_fechaNac);
-
-                textNombre.Text = " ";
-                textApellido.Text = " ";
-                textBoxDireccion.Text = " ";
-                textBoxEmail.Text = " ";
-                textNacionalidad.Text = " ";
-                textEntrenador.Text = " ";
-                textDNI.Text = " ";
+                textDNI.Text = "";
+                textApellido.Text = "";
+                textNombre.Text = "";
+                textNacionalidad.Text = "";
+                textEntrenador.Text = "";
+                comboBoxGenero.SelectedValue = "";
                 numericUpDownAltura.Value = 0;
                 numericUpDownPeso.Value = 0;
+                textBoxDireccion.Text = "";
+                textBoxEmail.Text = "";
+
+                MessageBox.Show("Usuario guardado correctamente");
             }
-           
         }
 
         private void dateTimeFechaNac_ValueChanged(object sender, EventArgs e)

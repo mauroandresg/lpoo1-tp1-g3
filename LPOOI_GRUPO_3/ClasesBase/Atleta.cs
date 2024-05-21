@@ -5,9 +5,20 @@ using System.Text;
 
 namespace ClasesBase
 {
-    public class Atleta : ClasesBase.IAtleta
+    public class Atleta
     {
         private int atl_id;
+        private string atl_dni;
+        private string apellido;
+        private string nombre;
+        private string nacionalidad;
+        private string entrenador;
+        private char genero;
+        private float altura;
+        private float peso;
+        private DateTime fechaNac;
+        private string direccion;
+        private string email;
 
         public int Atl_id
         {
@@ -91,12 +102,30 @@ namespace ClasesBase
             set { atl_direccion = value; }
         }
 
-        private string alt_email;
+        private string atl_email;
 
-        public string Alt_email
+        public string Atl_email
         {
-            get { return alt_email; }
-            set { alt_email = value; }
+            get { return atl_email; }
+            set { atl_email = value; }
+        }
+        public Atleta(int id, string dni, string apellido, string nombre, string nacionalidad, string entrenador, char genero, float altura, float peso, DateTime fechaNac, string direccion, string email)
+        {
+            atl_id = id;
+            atl_apellido = apellido;
+            atl_nombre = nombre;
+            atl_nacionalidad = nacionalidad;
+            atl_entrenador = entrenador;
+            atl_genero = genero;
+            atl_altura = altura;
+            atl_peso = peso;
+            atl_fechaNac = fechaNac;
+            atl_direccion = direccion;
+            atl_email = email;
+        }
+        public Atleta()
+        {
+
         }
     }
 }
