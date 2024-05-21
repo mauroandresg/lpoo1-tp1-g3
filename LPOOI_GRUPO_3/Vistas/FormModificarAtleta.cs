@@ -45,6 +45,7 @@ namespace Vistas
                 textBoxDireccionAtleta.Text = "";
                 textBoxEmailAtleta.Text = "";
 
+                textBoxIdAtleta.Text = dataGridViewAtleta.CurrentRow.Cells["Id Atleta"].Value.ToString();
                 textBoxDNIatleta.Text = dataGridViewAtleta.CurrentRow.Cells["DNI"].Value.ToString();
                 textBoxApellidoAtleta.Text = dataGridViewAtleta.CurrentRow.Cells["Apellido"].Value.ToString();
                 textBoxNombreAtleta.Text = dataGridViewAtleta.CurrentRow.Cells["Nombre"].Value.ToString();
@@ -77,7 +78,8 @@ namespace Vistas
                 {
                     Atleta atleta = new Atleta
                     {
-                        Atl_dni = textBoxDNIatleta.Text,
+                        Atl_id = Convert.ToInt32(textBoxIdAtleta.Text),
+                        Atl_dni= textBoxDNIatleta.Text,
                         Atl_apellido = textBoxApellidoAtleta.Text,
                         Atl_nombre = textBoxNombreAtleta.Text,
                         Atl_nacionalidad = textBoxNacionalidadAtleta.Text,
@@ -90,6 +92,7 @@ namespace Vistas
                         Atl_email = textBoxEmailAtleta.Text
                     };
 
+                    TrabajarAtleta.modificarAtleta(atleta);
                     MessageBox.Show("Información actualizada correctamente");
 
                     textBoxDNIatleta.Text = "";
@@ -109,8 +112,14 @@ namespace Vistas
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
+            if (textBoxIdAtleta.Text == "")
+            {
+                MessageBox.Show("Los campos no deben estar vacios");
+            }
             int atl_id = Convert.ToInt32(textBoxIdAtleta.Text);
-            TrabajarUsuario.eliminarUsuario(atl_id);
+
+            TrabajarAtleta.eliminarAtleta(atl_id);
+
             MessageBox.Show("Usuario eliminado correctamente");
 
             textBoxDNIatleta.Text = "";

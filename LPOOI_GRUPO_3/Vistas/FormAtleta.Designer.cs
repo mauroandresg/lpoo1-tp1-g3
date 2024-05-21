@@ -286,7 +286,6 @@
             this.comboBoxGenero.Size = new System.Drawing.Size(201, 24);
             this.comboBoxGenero.TabIndex = 24;
             this.comboBoxGenero.Text = "M";
-            this.comboBoxGenero.SelectedIndexChanged += new System.EventHandler(this.comboBoxGenero_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -307,7 +306,6 @@
             this.dateTimeFechaNac.Name = "dateTimeFechaNac";
             this.dateTimeFechaNac.Size = new System.Drawing.Size(200, 20);
             this.dateTimeFechaNac.TabIndex = 26;
-            this.dateTimeFechaNac.ValueChanged += new System.EventHandler(this.dateTimeFechaNac_ValueChanged);
             // 
             // label12
             // 

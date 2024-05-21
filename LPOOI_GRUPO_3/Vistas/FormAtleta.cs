@@ -34,50 +34,45 @@ namespace Vistas
         private void btnCrearAtleta_Click(object sender, EventArgs e)
         {
 
-            Atleta atleta = new Atleta();
-
-            atleta.Atl_nombre = textNombre.Text;
-            atleta.Atl_apellido = textApellido.Text;
-            atleta.Atl_dni = textDNI.Text;
-            atleta.Atl_genero = Convert.ToChar(comboBoxGenero.Text);
-            atleta.Atl_nacionalidad = textNacionalidad.Text;
-            atleta.Atl_direccion = textBoxDireccion.Text;
-            atleta.Atl_email = textBoxEmail.Text;
-            atleta.Atl_altura = Convert.ToDouble(numericUpDownAltura.Value);
-            atleta.Atl_peso = Convert.ToDouble(numericUpDownPeso.Value);
-            atleta.Atl_fechaNac = dateTimeFechaNac.Value;
-
             if (textNombre.Text == "" || textApellido.Text == "" || textDNI.Text == "")
             {
                 MessageBox.Show("Los campos no deben estar vacios");
             }
             else
             {
+                // Crear una nueva instancia de Atleta y asignar valores
+                Atleta atleta = new Atleta
+                {
+                    Atl_nombre = textNombre.Text,
+                    Atl_apellido = textApellido.Text,
+                    Atl_dni = textDNI.Text,
+                    Atl_genero = string.IsNullOrEmpty(comboBoxGenero.Text) ? '\0' : comboBoxGenero.Text[0],
+                    Atl_nacionalidad = textNacionalidad.Text,
+                    Atl_direccion = textBoxDireccion.Text,
+                    Atl_entrenador = textEntrenador.Text,
+                    Atl_email = textBoxEmail.Text,
+                    Atl_altura = Convert.ToDouble(numericUpDownAltura.Value),
+                    Atl_peso = Convert.ToDouble(numericUpDownPeso.Value),
+                    Atl_fechaNac = dateTimeFechaNac.Value
+                };
+
+                // Guardar el atleta en la base de datos
                 TrabajarAtleta.guardarAtleta(atleta);
 
-                textDNI.Text = "";
-                textApellido.Text = "";
-                textNombre.Text = "";
-                textNacionalidad.Text = "";
-                textEntrenador.Text = "";
-                comboBoxGenero.SelectedValue = "";
+                // Limpiar los campos después de guardar
+                textDNI.Clear();
+                textApellido.Clear();
+                textNombre.Clear();
+                textNacionalidad.Clear();
+                textEntrenador.Clear();
+                comboBoxGenero.SelectedIndex = -1;
                 numericUpDownAltura.Value = 0;
                 numericUpDownPeso.Value = 0;
-                textBoxDireccion.Text = "";
-                textBoxEmail.Text = "";
+                textBoxDireccion.Clear();
+                textBoxEmail.Clear();
 
-                MessageBox.Show("Usuario guardado correctamente");
+                MessageBox.Show("Atleta guardado correctamente");
             }
-        }
-
-        private void dateTimeFechaNac_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxGenero_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
