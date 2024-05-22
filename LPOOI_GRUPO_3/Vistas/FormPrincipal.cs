@@ -12,6 +12,10 @@ namespace Vistas
 {
     public partial class FormPrincipal : Form
     {
+        public bool AccesoGestionUsuarios { get; set; }
+        public bool AccesoAtletasCompeticiones { get; set; }
+        public bool AccesoTotal { get; set; }
+
         public FormPrincipal()
         {
             InitializeComponent();
@@ -59,12 +63,6 @@ namespace Vistas
             addForm(f);
         }
 
-        private void eliminarToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-            FormUsuario f = new FormUsuario();
-            addForm(f);
-        }
-
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormModificarUsuario f = new FormModificarUsuario();
@@ -75,6 +73,21 @@ namespace Vistas
         {
             FormModificarAtleta f = new FormModificarAtleta();
             addForm(f);
+        }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            if (!AccesoTotal)
+            {
+                crearToolStripMenuItem4.Visible = AccesoGestionUsuarios;
+                modificarToolStripMenuItem.Visible = AccesoGestionUsuarios;
+
+                crearToolStripMenuItem1.Visible = AccesoAtletasCompeticiones;
+                modificarToolStripMenuItem1.Visible = AccesoAtletasCompeticiones;
+
+                crearToolStripMenuItem2.Visible = AccesoAtletasCompeticiones;
+                crearToolStripMenuItem3.Visible = AccesoAtletasCompeticiones;
+            }
         }
     }
 }

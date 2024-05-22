@@ -12,10 +12,6 @@ namespace ClasesBase
         private string usu_contraseña;
         private string usu_ApellidoNombre;
         private int rol_codigo;
-        private int p;
-        private string p_2;
-        private string p_3;
-        private string p_4;
 
         public int Rol_codigo
         {

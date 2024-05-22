@@ -61,13 +61,19 @@
             // buttonAceptar
             // 
             this.buttonAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAceptar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.buttonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.buttonAceptar.ForeColor = System.Drawing.Color.Black;
             this.buttonAceptar.Location = new System.Drawing.Point(299, 209);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(134, 37);
             this.buttonAceptar.TabIndex = 2;
             this.buttonAceptar.Text = "Aceptar";
-            this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.UseVisualStyleBackColor = false;
             this.buttonAceptar.Click += new System.EventHandler(this.button1_Click);
             // 
             // user
@@ -134,7 +140,6 @@
             this.Name = "FormLogin";
             this.Text = "FormLogin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

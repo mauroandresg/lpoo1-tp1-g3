@@ -26,6 +26,34 @@ namespace ClasesBase
             da.Fill(dt);
             return dt;
         }
+        public static Usuario ObtenerUsuario(string nombreUsuario, string contraseña)
+        {
+            Usuario usuario = null;
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.competenciaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Usuario WHERE usu_nombreUsuario = @nombreUsuario AND usu_contraseña = @contraseña";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+            cmd.Parameters.AddWithValue("@contraseña", contraseña);
+
+            cnn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                int id = reader.GetInt32(0);
+                string nombre = reader.GetString(1);
+                string pass = reader.GetString(2);
+                string apellidoNombre = reader.GetString(3);
+                int rolId = reader.GetInt32(4);
+                usuario = new Usuario(id, nombre, pass, apellidoNombre, rolId);
+            }
+
+            cnn.Close();
+            return usuario;
+        }
 
         public static void insertarUsuario(Usuario user) {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.competenciaConnectionString);
